@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Randaberg Restaurant & Take Away</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+            background-color: #d3f8c4; /* Fallback for older browsers */
+            background-image: linear-gradient(to bottom, #baf8a1, #e8fae2); /* Green gradient */
+            color: #374151; /* Gray-700 */
+        }
+        .menu-category-title {
+            border-bottom: 2px solid #166534; /* Dark Green */
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.75rem; /* text-2xl */
+        }
+        .menu-item {
+            border-bottom: 1px dashed #A3E635; /* Lime-400 */
+            padding-bottom: 0.75rem;
+            margin-bottom: 0.75rem;
+        }
+        .menu-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+        .allergy-info-inline { /* For allergies next to item name */
+            font-size: 0.8rem;
+            color: #DC2626; /* Red-600 */
+            font-weight: 500;
+        }
+        .nav-link {
+            transition: color 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #A3E635; /* Lime-400 for nav hover */
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2.25rem; /* text-4xl */
+            font-weight: 700; /* font-bold */
+            margin-bottom: 2rem; /* mb-8 */
+            color: #000000; /* Darker Green for titles, e.g., Green-700 */
+        }
+        .card {
+            background-color: white;
+            border-radius: 0.75rem; /* rounded-xl */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .price-label {
+            font-size: 0.85rem;
+            color: #4B5563; /* Gray-600 */
+        }
+        .price-amount {
+            font-weight: 600; /* semibold */
+            color: #15803D; /* Dark Green for prices, e.g., Green-600 */
+        }
+        .nav-custom {
+            background-color: #34463b; /* Dark Green for Nav/Footer (Green-800) */
+        }
+        .nav-custom .nav-link:hover {
+            background-color: #65c98b; /* Slightly lighter green for hover (Green-700) */
+        }
+        .footer-custom {
+            background-color: #14532D; /* Dark Green for Nav/Footer (Green-800) */
+        }
+        .footer-custom .hover\:text-yellow-400:hover { /* Keep original class for specificity */
+            color: #A3E635; /* Lime-400 for social icon hover */
+        }
+        .item-description {
+            font-size: 0.85rem;
+            color: #52525B; /* zinc-600 */
+            margin-top: 0.1rem;
+        }
+    </style>
+</head>
+<body class="text-gray-800"> 
+
+    <nav class="nav-custom text-white p-4 sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold"><i class="fas fa-phone mr-2"></i> 51 41 58 68</a>
+            <div>
+                <a href="#info" class="nav-link px-3 py-2 rounded-md">Info</a>
+                <a href="#recommendations" class="nav-link px-3 py-2 rounded-md">Kokkens Spesial</a>
+                <a href="#menu" class="nav-link px-3 py-2 rounded-md">Meny</a>
+                <a href="#contact" class="nav-link px-3 py-2 rounded-md">Kontakt</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="info" class="py-16">
+        <div class="container mx-auto px-6 text-center">
+            <img src="/img/randatake-logo.svg" alt="Randaberg Take Away Logo" style="width: 90px; height: auto;" class="mx-auto mb-2">
+            <h1 class="text-6xl font-light text-black-700 mb-2">RANDABERG</h1>
+            <p class="text-2xl text-black-600 font-medium mb-6">RESTAURANT & TAKE AWAY</p>
+            <p class="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
+                Vi har Kinamat og Thaimat.<br>
+                Vi tilbyr både servering i restauranten og take away.<br>
+                Vi tar også imot bestillinger til store selskaper.
+            </p>
+
+            <div class="grid md:grid-cols-3 gap-8 text-left">
+                <div class="card p-6">
+                    <h3 class="text-2xl font-semibold text-green-600 mb-3"><i class="fas fa-clock mr-2"></i>Åpningstider</h3>
+                    <ul class="text-gray-700 space-y-1">
+                        <li><strong>Mandag:</strong> 13:00 - 20:00</li>
+                        <li><strong>Tirsdag:</strong> 12:00 - 21:00</li>
+                        <li><strong>Onsdag:</strong> 12:00 - 21:00</li>
+                        <li><strong>Torsdag:</strong> 12:00 - 21:00</li>
+                        <li><strong>Fredag:</strong> 12:00 - 21:00</li>
+                        <li><strong>Lørdag:</strong> 12:00 - 21:00</li>
+                        <li><strong>Søndag:</strong> 12:00 - 21:00</li>
+                        <small>Vi har av og til stengt på mandager</small>
+                    </ul>
+                </div>
+
+                <div class="card p-6">
+                    <h3 class="text-2xl font-semibold text-green-600 mb-3"><i class="fas fa-phone-alt mr-2"></i>Bestille mat?</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li>Tlf: <a href="tel:51415868" class="text-black-600 hover:underline"><strong>51 41 58 68</strong></a></li>
+                        <li>Mob: <a href="tel:99262855" class="text-black-600 hover:underline">99 26 28 55</a></li><br>
+                        Vi tar også imot reservasjoner og bestillinger.
+                </div>
+
+                <div class="card p-6">
+                    <h3 class="text-2xl font-semibold text-green-600 mb-3"><i class="fas fa-map-marker-alt mr-2"></i>Finn Oss</h3>
+                    <a href="https://maps.app.goo.gl/KMQPJ4DC1v694d7S6" class="text-black-600 hover:underline">Jon Torbergssonsvei 6, 4070 Randaberg</a><br><br>
+                    Restauranten vår er midt i Randaberg sentrum. Det finnes flere gratis parkeringsplasser i nærheten.
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="recommendations" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title">Kokkens Anbefalinger</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card overflow-hidden">
+                    <img src="https://placehold.co/600x400/6EE7B7/052E16?text=Oksekj%C3%B8tt+m.m." alt="Kokkens Anbefaling 1" class="w-full h-48 object-cover" onerror="this.src='https://placehold.co/600x400/6EE7B7/052E16?text=Bilde+Feil'">
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-green-700 mb-1">53. Oksekjøtt, kylling, svinekjøtt og kongereker <span class="allergy-info-inline">(A, H)</span></h4>
+                        <p class="item-description">Med grønnsaker.</p>
+                        <div class="mt-2">
+                            <p><span class="price-label">Take Away:</span> <span class="price-amount">190,-</span></p>
+                            <p><span class="price-label">Restaurant:</span> <span class="price-amount">210,-</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card overflow-hidden">
+                    <img src="https://placehold.co/600x400/A7F3D0/064E3B?text=Stekte+Gr%C3%B8nnsaker" alt="Kokkens Anbefaling 2" class="w-full h-48 object-cover" onerror="this.src='https://placehold.co/600x400/A7F3D0/064E3B?text=Bilde+Feil'">
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-green-700 mb-1">54. Stekte grønnsaker med karri saus eller chili saus (vegetar) <span class="allergy-info-inline">(A)</span></h4>
+                        <div class="mt-2">
+                            <p><span class="price-label">Take Away:</span> <span class="price-amount">190,-</span></p>
+                            <p><span class="price-label">Restaurant:</span> <span class="price-amount">210,-</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card overflow-hidden">
+                    <img src="https://placehold.co/600x400/D1FAE5/047857?text=Kyllingvinger" alt="Kokkens Anbefaling 3" class="w-full h-48 object-cover" onerror="this.src='https://placehold.co/600x400/D1FAE5/047857?text=Bilde+Feil'">
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-green-700 mb-1">55. Fritert kyllingvinger med karri saus eller sur-søt saus <span class="allergy-info-inline">(B, G)</span></h4>
+                        <div class="mt-2">
+                            <p><span class="price-label">Take Away:</span> <span class="price-amount">190,-</span></p>
+                            <p><span class="price-label">Restaurant:</span> <span class="price-amount">210,-</span></p>
+                        </div>
+                    </div>
+                </div>
+                 <div class="card overflow-hidden">
+                    <img src="https://placehold.co/600x400/6EE7B7/052E16?text=Gr%C3%B8nnsaker+Cashew" alt="Kokkens Anbefaling 4" class="w-full h-48 object-cover" onerror="this.src='https://placehold.co/600x400/6EE7B7/052E16?text=Bilde+Feil'">
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-green-700 mb-1">56S. Stekte grønnsaker med cashewnøtter (vegetar) <span class="allergy-info-inline">(A, E)</span></h4>
+                        <div class="mt-2">
+                            <p><span class="price-label">Take Away:</span> <span class="price-amount">195,-</span></p>
+                            <p><span class="price-label">Restaurant:</span> <span class="price-amount">220,-</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title">Vår Meny</h2>
+            <div class="mb-6 p-4 bg-lime-100 border-l-4 border-lime-500 text-lime-700 rounded-md">
+                <h4 class="font-bold">Prisinformasjon:</h4>
+                <p class="text-sm">Prisene er oppgitt som Take Away / Restaurant. Vi har ulike priser grunnet forskjeller i merverdiavgift (MVA).</p>
+            </div>
+
+            <div class="mb-8 p-4 bg-sky-100 border-l-4 border-sky-500 text-sky-700 rounded-md">
+                <h4 class="font-bold">Allergener:</h4>
+                <p class="text-sm">
+                    <strong>A</strong> - Soya, <strong>B</strong> - Egg, <strong>C</strong> - Peanøtter, <strong>D</strong> - Kokos melk, <strong>E</strong> - Cashewnøtter, <strong>F</strong> - Fisk, <strong>G</strong> - Hvetemel, <strong>H</strong> - Skalldyr.
+                    <br>Vennligst informer oss om eventuelle allergier ved bestilling. Fullstendig allergeninformasjon er tilgjengelig i restauranten.
+                </p>
+                <p class="text-sm mt-1"><strong>Ekstra (Priser fra menybildet):</strong> Kjøtt: 80,-/90,- | Ris: 40,-/45,- | Saus: 40,-/50,- | Chili: 5,-/5,- | Grønnsaker: 30,-/40,- | Cashewnøtter: 30,-/40,-</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-x-8 gap-y-12">
+                <div class="card p-6">
+                    <h3 class="text-green-700 menu-category-title">Lunsj <span class="text-sm font-normal">(Man-Lør 12-18, ikke helligdager)</span></h3>
+                    <div class="space-y-4">
+                        <div class="menu-item">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h5 class="font-semibold">L1. Kylling i skiver med grønnsaker <span class="allergy-info-inline">(A)</span></h5>
+                                </div>
+                                <div class="text-right ml-2 flex-shrink-0">
+                                    <p><span class="price-label">T.A:</span> <span class="price-amount">140,-</span></p>
+                                    <p><span class="price-label">Rest:</span> <span class="price-amount">160,-</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h5 class="font-semibold">L2. Oksekjøtt i skiver med grønnsaker <span class="allergy-info-inline">(A)</span></h5>
+                                </div>
+                                <div class="text-right ml-2 flex-shrink-0">
+                                    <p><span class="price-label">T.A:</span> <span class="price-amount">140,-</span></p>
+                                    <p><span class="price-label">Rest:</span> <span class="price-amount">160,-</span></p>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="menu-item">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h5 class="font-semibold">L3. Fritert kylling med søt-sur saus <span class="allergy-info-inline">(B, G)</span></h5>
+                                </div>
+                                <div class="text-right ml-2 flex-shrink-0">
+                                    <p><span class="price-label">T.A:</span> <span class="price-amount">140,-</span></p>
+                                    <p><span class="price-label">Rest:</span> <span class="price-amount">160,-</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h5 class="font-semibold">L9. Stekt ris med kylling og reker <span class="allergy-info-inline">(B)</span></h5>
+                                </div>
+                                <div class="text-right ml-2 flex-shrink-0">
+                                    <p><span class="price-label">T.A:</span> <span class="price-amount">130,-</span></p>
+                                    <p><span class="price-label">Rest:</span> <span class="price-amount">155,-</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card p-6">
+                    <h3 class="text-green-700 menu-category-title">Forretter / Appetizers</h3>
+                    <div class="space-y-4">
+                        <div class="menu-item">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h5 class="font-semibold">1. Vårrull (2 stk.) <span class="allergy-info-inline">(B, C, G)</span></h5>
+                                </div>
+                                <div class="text-right ml-2 flex-shrink-0">
+                                    <p><span class="price-label">T.A:</span> <span class="price-amount">85,-</span></p>
+                                    <p><span class="price-label">Rest:</span> <span class="price-amount">95,-</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h5 class="font-semibold">2. Mini vårruller (Vegetar 10 stk.) <span class="allergy-info-inline">(B, G)</span></h5>
+                                </div>
+                                <div class="text-right ml-2 flex-shrink-0">
+                                    <p><span class="price-label">T.A:</span> <span class="price-amount">85,-</span></p>
+                                    <p><span class="price-label">Rest:</span> <span class="price-amount">95,-</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h5 class="font-semibold">3. Kantonesisk vårrull (2 stk.) <span class="allergy-info-inline">(B, G, H)</span></h5>
+                                     <p class="item-description">King prawn spring rolls</p>
+                                </div>
+                                <div class="text-right ml-2 flex-shrink-0">
+                                    <p><span class="price-label">T.A:</span> <span class="price-amount">95,-</span></p>
+                                    <p><span class="price-label">Rest:</span> <span class="price-amount">110,-</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                </div>
+
+                <div class="card p-6 md:col-span-2"> <h3 class="text-green-700 menu-category-title">Middag for flere personer</h3>
+                    <div class="space-y-4">
+                        <div class="menu-item">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h5 class="font-semibold">A: Middag for 2 personer <span class="allergy-info-inline">(A, B, C, G)</span></h5>
+                                    <p class="item-description">Kylling suppe med mais, Kylling med brokkoli, Oksekjøtt med brokkoli, Svinekjøtt med ingefær og chili (sterk)</p>
+                                </div>
+                                <div class="text-right ml-2 flex-shrink-0">
+                                    <p><span class="price-label">T.A:</span> <span class="price-amount">460,-</span></p>
+                                    <p><span class="price-label">Rest:</span> <span class="price-amount">530,-</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h5 class="font-semibold">B: Middag for 3 personer <span class="allergy-info-inline">(A, B, G, H)</span></h5>
+                                    <p class="item-description">Kongereker fritert, Kylling med cashewnøtter, Biff chop suey med kinesisk ro (sterk), Fritert svinekjøtt med sur-søt saus</p>
+                                </div>
+                                <div class="text-right ml-2 flex-shrink-0">
+                                    <p><span class="price-label">T.A:</span> <span class="price-amount">590,-</span></p>
+                                    <p><span class="price-label">Rest:</span> <span class="price-amount">710,-</span></p>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="menu-item">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h5 class="font-semibold">C: Middag for 4 personer <span class="allergy-info-inline">(A, B, G, H)</span></h5>
+                                    <p class="item-description">4 Vårruller, Oksekjøtt med grønnsaker, Kongereker med brokkoli, Kylling med karri saus (sterk), Fritert svinekjøtt på Kinesisk vis (sterk)</p>
+                                </div>
+                                <div class="text-right ml-2 flex-shrink-0">
+                                    <p><span class="price-label">T.A:</span> <span class="price-amount">900,-</span></p>
+                                    <p><span class="price-label">Rest:</span> <span class="price-amount">1150,-</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card p-6">
+                    <h3 class="text-green-700 menu-category-title">Kylling / Chicken</h3>
+                    <p class="text-xs text-gray-500 mb-2">Alle hovedretter serveres med ris.</p>
+                    <div class="space-y-4">
+                        <div class="menu-item">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h5 class="font-semibold">8. Kylling Chop Suey <span class="allergy-info-inline">(A, E)</span></h5>
+                                    <p class="item-description">Chicken with vegetables</p>
+                                </div>
+                                <div class="text-right ml-2 flex-shrink-0">
+                                    <p><span class="price-label">T.A:</span> <span class="price-amount">190,-</span></p>
+                                    <p><span class="price-label">Rest:</span> <span class="price-amount">220,-</span></p>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="menu-item">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h5 class="font-semibold">9. Kylling i karri sterk saus <span class="allergy-info-inline">(A)</span></h5>
+                                </div>
+                                <div class="text-right ml-2 flex-shrink-0">
+                                    <p><span class="price-label">T.A:</span> <span class="price-amount">190,-</span></p>
+                                    <p><span class="price-label">Rest:</span> <span class="price-amount">210,-</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                </div>
+                
+                <div class="card p-6">
+                    <h3 class="text-green-700 menu-category-title">Oksekjøtt / Beef</h3>
+                     <p class="text-xs text-gray-500 mb-2">Alle hovedretter serveres med ris.</p>
+                     <div class="space-y-4">
+                        <div class="menu-item">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h5 class="font-semibold">18. Biff Chop Suey <span class="allergy-info-inline">(A)</span></h5>
+                                    <p class="item-description">Beef with vegetables</p>
+                                </div>
+                                <div class="text-right ml-2 flex-shrink-0">
+                                    <p><span class="price-label">T.A:</span> <span class="price-amount">195,-</span></p>
+                                    <p><span class="price-label">Rest:</span> <span class="price-amount">210,-</span></p>
+                                </div>
+                            </div>
+                        </div>
+                         </div>
+                </div>
+
+                <div class="card p-6">
+                    <h3 class="text-green-700 menu-category-title">Andre Retter</h3>
+                    <div class="space-y-4">
+                        <div class="menu-item">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h5 class="font-semibold">405. Hamburger m/Pommes Frites (Hjemmelaget) <span class="allergy-info-inline">(G)</span></h5>
+                                </div>
+                                <div class="text-right ml-2 flex-shrink-0">
+                                    <p><span class="price-label">T.A:</span> <span class="price-amount">100,-</span></p>
+                                    <p><span class="price-label">Rest:</span> <span class="price-amount">110,-</span></p>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="menu-item">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h5 class="font-semibold">406. Pommes Frites</h5>
+                                </div>
+                                <div class="text-right ml-2 flex-shrink-0">
+                                    <p><span class="price-label">T.A:</span> <span class="price-amount">70,-</span></p>
+                                    <p><span class="price-label">Rest:</span> <span class="price-amount">80,-</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                </div>
+
+                <div class="card p-6">
+                    <h3 class="text-green-700 menu-category-title">Dessert</h3>
+                    <div class="space-y-4">
+                        <div class="menu-item">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h5 class="font-semibold">Fritert banan med is</h5>
+                                </div>
+                                <div class="text-right ml-2 flex-shrink-0">
+                                    <p><span class="price-label">T.A:</span> <span class="price-amount">-</span></p> <p><span class="price-label">Rest:</span> <span class="price-amount">110,-</span></p>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="menu-item">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h5 class="font-semibold">Stekt ris istedenfor kokt ris</h5>
+                                </div>
+                                <div class="text-right ml-2 flex-shrink-0">
+                                    <p><span class="price-label">T.A:</span> <span class="price-amount">60,-</span></p>
+                                    <p><span class="price-label">Rest:</span> <span class="price-amount">70,-</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h5 class="font-semibold">Stekte nudler istedenfor kokt ris</h5>
+                                </div>
+                                <div class="text-right ml-2 flex-shrink-0">
+                                    <p><span class="price-label">T.A:</span> <span class="price-amount">65,-</span></p>
+                                    <p><span class="price-label">Rest:</span> <span class="price-amount">75,-</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card p-6">
+                    <h3 class="text-green-700 menu-category-title">Drikke</h3>
+                    <div class="space-y-4">
+                        <div class="menu-item">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h5 class="font-semibold">Brus 0.5L</h5>
+                                </div>
+                                <div class="text-right ml-2 flex-shrink-0">
+                                    <p><span class="price-label">T.A:</span> <span class="price-amount">35,-</span></p>
+                                    <p><span class="price-label">Rest:</span> <span class="price-amount">45,-</span></p>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="menu-item">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h5 class="font-semibold">Brus 1.5L</h5>
+                                </div>
+                                <div class="text-right ml-2 flex-shrink-0">
+                                    <p><span class="price-label">T.A:</span> <span class="price-amount">60,-</span></p>
+                                    <p><span class="price-label">Rest:</span> <span class="price-amount">-</span></p> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="footer-custom text-white py-12">
+        <div class="container mx-auto px-6 text-center">
+            <h3 class="text-2xl font-semibold mb-6">Følg Oss / Besøk Oss</h3>
+            <div class="mb-4">
+                <p>Nettside: <a href="https://randabergtakeaway.no" target="_blank" class="hover:text-lime-300 underline">randabergtakeaway.no</a></p>
+            </div>
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="https://www.facebook.com/randabergtakeaway" class="text-3xl hover:text-yellow-400 transition-colors" aria-label="Facebook"><i class="fab fa-facebook-square"></i></a>
+                </div>
+            <p class="text-sm">© <span id="currentYear"></span> Randaberg Take Away. Alle rettigheter reservert.</p>
+            <p class="text-xs mt-1">Jon Torbergssonsvei 6, 4070 Randaberg | Tlf: 51 41 58 68</p>
+            <p class="text-xs mt-1">Designet med <i class="fas fa-heart text-lime-300"></i> i Randaberg</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
