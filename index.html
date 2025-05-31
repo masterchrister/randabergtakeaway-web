@@ -16,19 +16,19 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            scroll-behavior: smooth; /* Smooth scrolling for anchor links */
-            background-color: #d3f8c4; /* Fallback for older browsers */
-            background-image: linear-gradient(to bottom, #baf8a1, #e8fae2); /* Green gradient */
-            color: #374151; /* Gray-700 */
+            scroll-behavior: smooth; 
+            background-color: #d3f8c4; 
+            background-image: linear-gradient(to bottom, #baf8a1, #e8fae2); 
+            color: #374151; 
         }
         .menu-category-title {
-            border-bottom: 2px solid #166534; /* Dark Green */
+            border-bottom: 2px solid #166534; 
             padding-bottom: 0.5rem;
             margin-bottom: 1rem;
-            font-size: 1.75rem; /* text-2xl */
+            font-size: 1.75rem; 
         }
         .menu-item {
-            border-bottom: 1px dashed #A3E635; /* Lime-400 */
+            border-bottom: 1px dashed #A3E635; 
             padding-bottom: 0.75rem;
             margin-bottom: 0.75rem;
         }
@@ -36,28 +36,33 @@
             border-bottom: none;
             margin-bottom: 0;
         }
-        .allergy-info-inline { /* For allergies next to item name */
+        .allergy-info-inline { 
             font-size: 0.8rem;
-            color: #DC2626; /* Red-600 */
+            color: #DC2626; 
             font-weight: 500;
         }
-        .nav-link {
-            transition: color 0.3s ease;
+        .nav-link { /* Base style for nav links, color set by .nav-custom */
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
-        .nav-link:hover {
-            color: #A3E635; /* Lime-400 for nav hover */
+        .nav-link-desktop:hover { /* Specific hover for desktop links in .nav-custom */
+            background-color: #65c98b; /* Lighter green background from your .nav-custom .nav-link:hover */
+            color: white; /* Ensure text remains white or a contrasting color */
+        }
+         .nav-link-mobile:hover { /* Specific hover for mobile links */
+            background-color: #65c98b; /* Consistent hover background */
+            color: white; /* Ensure text remains white or a contrasting color */
         }
         .section-title {
             text-align: center;
-            font-size: 2.25rem; /* text-4xl */
-            font-weight: 700; /* font-bold */
-            margin-bottom: 2rem; /* mb-8 */
-            color: #000000; /* Darker Green for titles, e.g., Green-700 */
+            font-size: 2.25rem; 
+            font-weight: 700; 
+            margin-bottom: 2rem; 
+            color: #000000; 
         }
         .card {
             background-color: white;
-            border-radius: 0.75rem; /* rounded-xl */
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+            border-radius: 0.75rem; 
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); 
             transition: transform 0.3s ease;
         }
         .card:hover {
@@ -65,27 +70,25 @@
         }
         .price-label {
             font-size: 0.85rem;
-            color: #4B5563; /* Gray-600 */
+            color: #4B5563; 
         }
         .price-amount {
-            font-weight: 600; /* semibold */
-            color: #15803D; /* Dark Green for prices, e.g., Green-600 */
+            font-weight: 600; 
+            color: #15803D; 
         }
         .nav-custom {
-            background-color: #34463b; /* Dark Green for Nav/Footer (Green-800) */
+            background-color: #34463b; 
         }
-        .nav-custom .nav-link:hover {
-            background-color: #65c98b; /* Slightly lighter green for hover (Green-700) */
-        }
+        /* Removed .nav-custom .nav-link:hover as it's now more specific (.nav-link-desktop:hover) */
         .footer-custom {
-            background-color: #baf8a1; /* Dark Green for Nav/Footer (Green-800) */
+            background-color: #baf8a1; 
         }
-        .footer-custom .hover\:text-yellow-400:hover { /* Keep original class for specificity */
-            color: #A3E635; /* Lime-400 for social icon hover */
+        .footer-custom .hover\:text-yellow-400:hover { 
+            color: #A3E635; 
         }
         .item-description {
             font-size: 0.85rem;
-            color: #52525B; /* zinc-600 */
+            color: #52525B; 
             margin-top: 0.1rem;
         }
     </style>
@@ -95,13 +98,27 @@
     <nav class="nav-custom text-white p-4 sticky top-0 z-50 shadow-md">
         <div class="container mx-auto flex justify-between items-center">
             <a href="tel:51415868" class="text-2xl font-bold"><i class="fas fa-phone mr-2"></i> 51 41 58 68</a>
-            <div>
-                <a href="#info" class="nav-link px-3 py-2 rounded-md">Info</a>
-                <a href="#kokkens-spesial" class="nav-link px-3 py-2 rounded-md">Kokkens Spesial</a>
-                <a href="#meny" class="nav-link px-3 py-2 rounded-md">Meny</a>
-                <a href="#meny-lunch" class="nav-link px-3 py-2 rounded-md">Lunsjmeny</a>
-                <a href="#meny-ekstra" class="nav-link px-3 py-2 rounded-md">Tilbehør</a>
+            <div class="md:hidden">
+                <button id="menu-toggle" aria-label="Åpne meny" class="text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
             </div>
+
+            <div id="desktop-menu-links" class="hidden md:flex md:items-center md:space-x-1">
+                <a href="#info" class="nav-link nav-link-desktop px-3 py-2 rounded-md">Info</a>
+                <a href="#kokkens-spesial" class="nav-link nav-link-desktop px-3 py-2 rounded-md">Kokkens Spesial</a>
+                <a href="#meny" class="nav-link nav-link-desktop px-3 py-2 rounded-md">Meny</a> 
+                <a href="#meny-lunch" class="nav-link nav-link-desktop px-3 py-2 rounded-md">Lunsj</a>
+                <a href="#meny-ekstra" class="nav-link nav-link-desktop px-3 py-2 rounded-md">Tilbehør</a>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden mt-2 pb-2">
+            <a href="#info" class="block nav-link nav-link-mobile py-2 px-4 text-sm rounded-md">Info</a>
+            <a href="#kokkens-spesial" class="block nav-link nav-link-mobile py-2 px-4 text-sm rounded-md">Kokkens Spesial</a>
+            <a href="#meny" class="block nav-link nav-link-mobile py-2 px-4 text-sm rounded-md">Meny</a>
+            <a href="#meny-lunch" class="block nav-link nav-link-mobile py-2 px-4 text-sm rounded-md">Lunsj</a>
+            <a href="#meny-ekstra" class="block nav-link nav-link-mobile py-2 px-4 text-sm rounded-md">Tilbehør</a>
         </div>
     </nav>
 
@@ -1767,6 +1784,32 @@
     </footer>
 
     <script>
+        // Hamburger Meny knapp
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const desktopMenuLinks = document.getElementById('desktop-menu-links'); // To ensure it's hidden if JS disabled and then enabled
+
+        if (menuToggle && mobileMenu) {
+            menuToggle.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Optional: Close mobile menu when a link is clicked
+            const mobileNavLinks = mobileMenu.querySelectorAll('a');
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    // Smooth scroll to section
+                    const targetId = link.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        // targetElement.scrollIntoView({ behavior: 'smooth' }); // Already handled by CSS scroll-behavior
+                    }
+                    // Hide menu after click
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        }
+
         document.getElementById('currentYear').textContent = new Date().getFullYear();
     </script>
 
