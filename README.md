@@ -1,0 +1,1 @@
+This is the webpage for Randaberg Take Away, a small restaurant and take away in Randaberg, just ouside of Stavanger.
