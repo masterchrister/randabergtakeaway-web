@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Randaberg Restaurant & Take Away</title>
+    <meta name="description" content="Nyt deilig Kinamat og Thaimat hos Randaberg Take Away. Nyt maten i restauranten eller ta med. Vi tar også i mot bestillinger til større selskap.">
     <link rel="icon" type="image/png" href="/img/favi/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/img/favi/favicon.svg" />
     <link rel="shortcut icon" href="/img/favi/favicon.ico" />
@@ -12,7 +13,8 @@
     <link rel="manifest" href="/img/favi/site.webmanifest" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -92,6 +94,50 @@
             margin-top: 0.1rem;
         }
     </style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Randaberg Restaurant & Take Away",
+  "image": "https://www.randabergtakeaway.no/img/randatake-logo.svg", // Replace with your full URL
+  "description": "Nyt deilig Kinamat og Thaimat hos Randaberg Restaurant & Take Away. Vi tilbyr servering, take away, og catering i Randaberg sentrum.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Jon Torbergssonsvei 6",
+    "addressLocality": "Randaberg",
+    "postalCode": "4070",
+    "addressCountry": "NO"
+  },
+  "telephone": "+4751415868",
+  "servesCuisine": ["Kinamat", "Thaimat"],
+  "priceRange": "150 kr - 250 kr", // Or your typical price range e.g., "$$" or "kr 150 - kr 250"
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "opens": "12:00",
+      "closes": "21:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Monday",
+      "opens": "13:00",
+      "closes": "20:00"
+    }
+  ],
+  "menu": "https://randabergtakeaway.no/#meny", // Link to your menu section
+  "acceptsReservations": "Call to reserve", // Or "False" or "Call to reserve"
+  "url": "https://randabergtakeaway.no/" // Replace with your full URL
+}
+</script>
 </head>
 <body class="text-gray-800"> 
 
@@ -125,14 +171,13 @@
     <section id="info" class="py-16">
         <div class="container mx-auto px-6 text-center">
             <img src="/img/randatake-logo.svg" alt="Randaberg Take Away Logo" class="w-24 mx-auto mb-2">
-            <h1 class="text-6xl font-light text-black mb-2 text-center">RANDABERG</h1>
-            <p class="text-2xl text-black font-medium mb-6">RESTAURANT & TAKE AWAY</p>
+            <h1 class="text-4xl md:text-5xl font-bold text-black mb-4 text-center">Randaberg Restaurant & Take Away</h1>
+            <p class="text-xl md:text-2xl text-gray-700 mb-6 text-center">Kinamat og Thaimat i Randaberg Sentrum</p>
             <p class="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
                 Vi har Kinamat og Thaimat.<br>
                 Vi tilbyr både servering i restauranten og take away.<br>
                 Vi tar også imot bestillinger til store selskaper.
             </p>
-
             <div class="grid md:grid-cols-3 gap-8 text-left">
                 <div class="card p-6">
                     <h3 class="text-2xl font-semibold text-gray-600 mb-3"><i class="fas fa-phone-alt mr-2"></i>Bestille mat?</h3>
@@ -310,8 +355,6 @@
         <div class="container mx-auto px-6">
             <h2 class="section-title">Meny</h2>
             <div class="md:columns-2 gap-x-8">
-
-                
                 <div class="card p-6 mb-8 md:break-inside-avoid">
                     <h3 class="text-green-700 menu-category-title">Forretter / Appetizers</h3>
                     <div class="space-y-4">
@@ -425,7 +468,6 @@
                         </div>
                         </div>
                 </div>
-
                 <div class="card p-6 mb-8 md:break-inside-avoid"> 
                     <h3 class="text-green-700 menu-category-title">Middag for flere personer</h3>
                     <div class="space-y-4">
@@ -475,7 +517,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="card p-6 mb-8 md:break-inside-avoid">
                     <h3 class="text-green-700 menu-category-title">Kylling / Chicken</h3>
                     <div class="space-y-4">
@@ -638,7 +679,6 @@
                         </div>
                     <br><p class="text-xs text-gray-500 mb-2">Alle hovedretter serveres med ris.</p>
                 </div>
-                
                 <div class="card p-6 mb-8 md:break-inside-avoid">
                     <h3 class="text-green-700 menu-category-title">Oksekjøtt / Beef</h3>
                      <div class="space-y-4">
@@ -825,7 +865,6 @@
                          </div>
                          <br><p class="text-xs text-gray-500 mb-2">Alle hovedretter serveres med ris.</p>
                 </div>
-
                 <div class="card p-6 mb-8 md:break-inside-avoid">
                     <h3 class="text-green-700 menu-category-title">Svinekjøtt / Pork</h3>
                      <div class="space-y-4">
@@ -928,9 +967,6 @@
                          </div>
                          <br><p class="text-xs text-gray-500 mb-2">Alle hovedretter serveres med ris.</p>
                 </div>
-
-
-
                 <div class="card p-6 mb-8 md:break-inside-avoid">
                     <h3 class="text-green-700 menu-category-title">Nudler / Noodles</h3>
                      <div class="space-y-4">
@@ -1045,9 +1081,6 @@
                          </div>
                          <br><p class="text-xs text-gray-500 mb-2">Alle hovedretter serveres med ris.</p>
                 </div>
-
-
-
                 <div class="card p-6 mb-8 md:break-inside-avoid">
                     <h3 class="text-green-700 menu-category-title">Ris / Rice</h3>
                      <div class="space-y-4">
@@ -1125,8 +1158,6 @@
                         </div>
                          </div>
                 </div>
-
-
                 <div class="card p-6 mb-8 md:break-inside-avoid">
                     <h3 class="text-green-700 menu-category-title">Fisk / Fish</h3>
                      <div class="space-y-4">
@@ -1169,8 +1200,6 @@
                          </div>
                          <br><p class="text-xs text-gray-500 mb-2">Alle hovedretter serveres med ris.</p>
                 </div>
-
-
                 <div class="card p-6 mb-8 md:break-inside-avoid">
                     <h3 class="text-green-700 menu-category-title">And / Duck</h3>
                      <div class="space-y-4">
@@ -1225,9 +1254,6 @@
                          </div>
                          <br><p class="text-xs text-gray-500 mb-2">Alle hovedretter serveres med ris.</p>
                 </div>
-
-
-
                 <div class="card p-6 mb-8 md:break-inside-avoid">
                     <h3 class="text-green-700 menu-category-title">Lam / Lamb</h3>
                      <div class="space-y-4">
@@ -1270,9 +1296,6 @@
                          </div>
                          <br><p class="text-xs text-gray-500 mb-2">Alle hovedretter serveres med ris.</p>
                 </div>
-
-
-
                 <div class="card p-6 mb-8 md:break-inside-avoid">
                     <h3 class="text-green-700 menu-category-title">Kongereker / King Prawns</h3>
                      <div class="space-y-4">
@@ -1375,8 +1398,6 @@
                          </div>
                          <br><p class="text-xs text-gray-500 mb-2">Alle hovedretter serveres med ris.</p>
                 </div>
-
-
                 <div class="card p-6 mb-8 md:break-inside-avoid">
                     <h3 class="text-green-700 menu-category-title">Andre Retter</h3>
                     <div class="space-y-4">
@@ -1659,20 +1680,20 @@
                         </div>
                     </div>
                 </div>
-
             </div>
             <div class="mb-8 p-4 bg-pink-100 border-4 border-red-200 text-gray-700 rounded-md"> 
                 <h4 class="font-bold">Allergener:</h4>
                 <p class="text-sm">
-                    <span class="allergy-key-item" title="Soya"><i class="fas fa-leaf"></i> Soya</span>
-                    <span class="allergy-key-item" title="Egg"><i class="fas fa-egg"></i> Egg</span>
-                    <span class="allergy-key-item" title="Peanøtter"><i class="fas fa-seedling"></i> Peanøtter</span>
-                    <span class="allergy-key-item" title="Kokos melk"><i class="fas fa-tint"></i> Kokos melk</span>
-                    <span class="allergy-key-item" title="Cashewnøtter"><i class="fas fa-seedling"></i> Cashewnøtter</span>
-                    <span class="allergy-key-item" title="Fisk"><i class="fas fa-fish"></i> Fisk</span>
-                    <span class="allergy-key-item" title="Hvetemel"><i class="fas fa-wheat-awn"></i> Hvetemel</span>
-                    <span class="allergy-key-item" title="Skalldyr"><i class="fas fa-shrimp"></i> Skalldyr</span>
-                    <br>Vennligst informer oss om eventuelle allergier ved bestilling. Fullstendig allergeninformasjon er tilgjengelig i restauranten.
+                    <span class="allergy-key-item" title="Soya"><i class="fas fa-leaf"></i> (A) Soya</span>
+                    <span class="allergy-key-item" title="Egg"><i class="fas fa-egg"></i> (B) Egg</span>
+                    <span class="allergy-key-item" title="Peanøtter"><i class="fas fa-leaf"></i> (C) Peanøtter</span>
+                    <span class="allergy-key-item" title="Kokos melk"><i class="fas fa-tint"></i> (D) Kokos melk</span>
+                    <span class="allergy-key-item" title="Cashewnøtter"><i class="fas fa-seedling"></i> (E) Cashewnøtter</span>
+                    <span class="allergy-key-item" title="Fisk"><i class="fas fa-fish"></i> (F) Fisk</span>
+                    <span class="allergy-key-item" title="Hvetemel"><i class="fas fa-wheat-awn"></i> (G) Hvetemel</span>
+                    <span class="allergy-key-item" title="Skalldyr"><i class="fas fa-shrimp"></i> (H) Skalldyr</span>
+                    <p class="item-description">Vennligst informer oss om eventuelle allergier ved bestilling.</p>
+                    <p class="item-description">Fullstendig allergeninformasjon er tilgjengelig i restauranten.</p>
                 </p>
             </div>
                     <div class="mb-6 p-4 bg-blue-100 border-l-4 border-gray-300 text-black rounded-md">
@@ -1751,7 +1772,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="card p-6 mb-8 md:break-inside-avoid">
                     <h4 class="text-green-700 menu-category-title">Drikke</h4>
                     <div class="space-y-4">
@@ -1779,7 +1799,6 @@
                     </div>
                 </div>
         </div>
-
     </section>
 
     <footer id="bunn" class="footer-custom text-black py-12">
@@ -1803,7 +1822,6 @@
             menuToggle.addEventListener('click', () => {
                 mobileMenu.classList.toggle('hidden');
             });
-
             // Optional: Close mobile menu when a link is clicked
             const mobileNavLinks = mobileMenu.querySelectorAll('a');
             mobileNavLinks.forEach(link => {
@@ -1819,11 +1837,7 @@
                 });
             });
         }
-
         document.getElementById('currentYear').textContent = new Date().getFullYear();
-
-        src="https://kit.fontawesome.com/5e38de628c.js" crossorigin="anonymous">
     </script>
-
 </body>
 </html>
