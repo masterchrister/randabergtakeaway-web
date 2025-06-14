@@ -1,0 +1,123 @@
+{
+  "restaurant": "Randaberg Take Away",
+  "currency": "NOK",
+  "menu": [
+    {
+      "id": "dish-046",
+      "name": {
+        "no": "Stekte kongereker på kinesisk vis",
+        "en": "King prawns in Chinese style"
+      },
+      "description": {
+        "no": "Sterk rett med stekte kongereker på kinesisk vis.",
+        "en": "Spicy dish with stir-fried king prawns in Chinese style."
+      },
+      "price": {
+        "takeaway": 230,
+        "dine_in": 269
+      },
+      "category": "Main Course",
+      "ingredients": ["king prawns", "chili", "soy sauce", "vegetables"],
+      "tags": ["spicy", "seafood", "chinese", "main course"],
+      "allergens": {
+        "gluten": true,
+        "milk": false,
+        "egg": false,
+        "nuts": false,
+        "soy": false,
+        "fish": false,
+        "shellfish": false,
+        "crustaceans": true,
+        "mustard": false,
+        "sesame": false,
+        "celery": false,
+        "sulfites": false,
+        "lupin": false
+      },
+      "allergen_notes": {
+        "no": "Inneholder gluten og skalldyr.",
+        "en": "Contains gluten and crustaceans."
+      },
+      "available": true,
+      "spice_level": "hot"
+    },
+    {
+      "id": "dish-047",
+      "name": {
+        "no": "Kongereker med Gon Bao saus",
+        "en": "King prawns with Gon Bao sauce"
+      },
+      "description": {
+        "no": "Sterk rett med kongereker i Gon Bao saus.",
+        "en": "Spicy dish with king prawns in Gon Bao sauce."
+      },
+      "price": {
+        "takeaway": 230,
+        "dine_in": 269
+      },
+      "category": "Main Course",
+      "ingredients": ["king prawns", "Gon Bao sauce", "chili", "peanuts"],
+      "tags": ["spicy", "seafood", "asian", "main course"],
+      "allergens": {
+        "gluten": true,
+        "milk": false,
+        "egg": false,
+        "nuts": true,
+        "soy": false,
+        "fish": false,
+        "shellfish": true,
+        "crustaceans": true,
+        "mustard": false,
+        "sesame": false,
+        "celery": false,
+        "sulfites": false,
+        "lupin": false
+      },
+      "allergen_notes": {
+        "no": "Inneholder gluten, nøtter og skalldyr.",
+        "en": "Contains gluten, nuts, and crustaceans."
+      },
+      "available": true,
+      "spice_level": "hot"
+    },
+    {
+      "id": "dish-048",
+      "name": {
+        "no": "Kongereker med ingefær og chili",
+        "en": "King prawns with ginger and chili"
+      },
+      "description": {
+        "no": "Sterk rett med kongereker, ingefær og chili.",
+        "en": "Spicy king prawns with ginger and chili."
+      },
+      "price": {
+        "takeaway": 230,
+        "dine_in": 269
+      },
+      "category": "Main Course",
+      "ingredients": ["king prawns", "ginger", "chili", "soy sauce"],
+      "tags": ["spicy", "seafood", "asian", "main course"],
+      "allergens": {
+        "gluten": true,
+        "milk": false,
+        "egg": false,
+        "nuts": false,
+        "soy": true,
+        "fish": false,
+        "shellfish": false,
+        "crustaceans": true,
+        "mustard": false,
+        "sesame": false,
+        "celery": false,
+        "sulfites": false,
+        "lupin": false
+      },
+      "allergen_notes": {
+        "no": "Inneholder gluten, soya og skalldyr.",
+        "en": "Contains gluten, soy, and crustaceans."
+      },
+      "available": true,
+      "spice_level": "hot"
+    }
+  ]
+}
