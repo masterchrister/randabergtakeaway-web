@@ -27,19 +27,19 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            scroll-behavior: smooth; 
-            background-color: #d3f8c4; 
-            background-image: linear-gradient(to bottom, #baf8a1, #e8fae2); 
-            color: #374151; 
+            scroll-behavior: smooth;
+            background-color: #d3f8c4;
+            background-image: linear-gradient(to bottom, #baf8a1, #e8fae2);
+            color: #374151;
         }
         .menu-category-title {
-            border-bottom: 2px solid #166534; 
+            border-bottom: 2px solid #166534;
             padding-bottom: 0.5rem;
             margin-bottom: 1rem;
-            font-size: 1.75rem; 
+            font-size: 1.75rem;
         }
         .menu-item {
-            border-bottom: 1px dashed #A3E635; 
+            border-bottom: 1px dashed #A3E635;
             padding-bottom: 0.75rem;
             margin-bottom: 0.75rem;
         }
@@ -47,9 +47,9 @@
             border-bottom: none;
             margin-bottom: 0;
         }
-        .allergy-info-inline { 
+        .allergy-info-inline {
             font-size: 0.8rem;
-            color: #DC2626; 
+            color: #DC2626;
             font-weight: 500;
         }
         .nav-link { /* Base style for nav links, color set by .nav-custom */
@@ -65,15 +65,15 @@
         }
         .section-title {
             text-align: center;
-            font-size: 2.25rem; 
-            font-weight: 700; 
-            margin-bottom: 2rem; 
-            color: #000000; 
+            font-size: 2.25rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            color: #000000;
         }
         .card {
             background-color: white;
-            border-radius: 0.75rem; 
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); 
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
             transition: transform 0.3s ease;
         }
         .card:hover {
@@ -81,35 +81,35 @@
         }
         .price-label {
             font-size: 0.85rem;
-            color: #4B5563; 
+            color: #4B5563;
         }
         .price-amount {
-            font-weight: 600; 
-            color: #15803D; 
+            font-weight: 600;
+            color: #15803D;
         }
         .nav-custom {
-            background-color: #34463b; 
+            background-color: #34463b;
         }
         /* Removed .nav-custom .nav-link:hover as it's now more specific (.nav-link-desktop:hover) */
         .footer-custom {
-            background-color: #baf8a1; 
+            background-color: #baf8a1;
         }
-        .footer-custom .hover\:text-yellow-400:hover { 
-            color: #A3E635; 
+        .footer-custom .hover\:text-yellow-400:hover {
+            color: #A3E635;
         }
         .item-description {
             font-size: 0.85rem;
-            color: #52525B; 
+            color: #52525B;
             margin-top: 0.1rem;
         }
     </style>
 
-<script type="application/ld+json">
+<script type="application/ld+json" id="restaurant-schema">
 {
   "@context": "https://schema.org",
   "@type": "Restaurant",
   "name": "Randaberg Take Away",
-  "image": "https://randabergtakeaway.no/img/randatake-logo.svg", // Replace with your full URL
+  "image": "https://randabergtakeaway.no/img/randatake-logo.svg",
   "description": "Nyt deilig Kinamat og Thaimat hos Randaberg Take Away. Slapp av i vår Restaurant, ta med maten hjem eller bestill catering. Du finner oss midt i Randaberg sentrum.",
   "address": {
     "@type": "PostalAddress",
@@ -120,7 +120,7 @@
   },
   "telephone": "+4751415868",
   "servesCuisine": ["Kinamat", "Thaimat"],
-  "priceRange": "200 kr - 300 kr", // Or your typical price range e.g., "$$" or "kr 150 - kr 250"
+  "priceRange": "200 kr - 300 kr",
   "openingHoursSpecification": [
     {
       "@type": "OpeningHoursSpecification",
@@ -142,12 +142,11 @@
       "closes": "20:00"
     }
   ],
-  "menu": "https://randabergtakeaway.no/#meny", // Link to your menu section
-  "acceptsReservations": "Call to reserve", // Or "False" or "Call to reserve"
-  "url": "https://randabergtakeaway.no/" // Replace with your full URL
+  "menu": "https://randabergtakeaway.no/#meny",
+  "acceptsReservations": "Call to reserve",
+  "url": "https://randabergtakeaway.no/"
 }
 </script>
-<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QZFHH4W1V9"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -157,9 +156,13 @@
   gtag('config', 'G-QZFHH4W1V9');
 </script>
 </head>
-<body class="text-gray-800"> 
+<body class="text-gray-800">
 
-    <nav class="nav-custom text-white p-4 sticky top-0 z-50 shadow-md">
+    <div id="vacation-notice" style="display: none;" class="fixed top-0 left-0 w-full bg-red-600 text-white text-center p-3 z-50 shadow-lg">
+        <p class="font-bold">🏖️ Vi har feriestengt! 🏖️</p>
+        <p class="text-sm">Velkommen tilbake <span id="reopen-date-banner"></span>.</p>
+    </div>
+    <nav class="nav-custom text-white p-4 sticky top-0 z-40 shadow-md">
         <div class="container mx-auto flex justify-between items-center">
             <a href="tel:51415868" class="text-2xl font-bold"><i class="fas fa-phone mr-2"></i> 51 41 58 68</a>
             <div class="md:hidden">
@@ -171,7 +174,7 @@
             <div id="desktop-menu-links" class="hidden md:flex md:items-center md:space-x-1">
                 <a href="#info" class="nav-link nav-link-desktop px-3 py-2 rounded-md">Info</a>
                 <a href="#kokkens-spesial" class="nav-link nav-link-desktop px-3 py-2 rounded-md">Kokkens Spesial</a>
-                <a href="#meny" class="nav-link nav-link-desktop px-3 py-2 rounded-md">Meny</a> 
+                <a href="#meny" class="nav-link nav-link-desktop px-3 py-2 rounded-md">Meny</a>
                 <a href="#meny-lunch" class="nav-link nav-link-desktop px-3 py-2 rounded-md">Lunsj</a>
                 <a href="#meny-ekstra" class="nav-link nav-link-desktop px-3 py-2 rounded-md">Tilbehør</a>
             </div>
@@ -200,13 +203,14 @@
                 <div class="card p-6">
                     <h3 class="text-2xl font-semibold text-gray-600 mb-3"><i class="fas fa-phone-alt mr-2"></i>Bestille mat?</h3>
                     <ul class="list-disc list-inside text-gray-700 space-y-1">
-                         <li>Tlf: <a href="tel:51415868" class="text-green-600 hover:underline font-bold"><strong>51 41 58 68</strong></a></li>
-                         <li>Mob: <a href="tel:99262855" class="text-green-600 hover:underline font-bold"><strong>99 26 28 55</strong></a></li>
-                     </ul>
+                          <li>Tlf: <a href="tel:51415868" class="text-green-600 hover:underline font-bold"><strong>51 41 58 68</strong></a></li>
+                          <li>Mob: <a href="tel:99262855" class="text-green-600 hover:underline font-bold"><strong>99 26 28 55</strong></a></li>
+                    </ul>
                 </div>
                 <div class="card p-6">
                     <h3 class="text-2xl font-semibold text-gray-600 mb-3"><i class="fas fa-clock mr-2"></i>Åpningstider</h3>
-                    <ul class="text-gray-700 space-y-1">
+
+                    <ul id="regular-hours" class="text-gray-700 space-y-1">
                         <li class="flex justify-between"><span><strong>Mandag:</strong></span> <span>13:00 - 20:00</span></li>
                         <li class="flex justify-between"><span><strong>Tirsdag:</strong></span> <span>12:00 - 21:00</span></li>
                         <li class="flex justify-between"><span><strong>Onsdag:</strong></span> <span>12:00 - 21:00</span></li>
@@ -217,6 +221,13 @@
                         <li class="mt-2"><small>* Vi har av og til stengt på mandager</small></li>
                         <li class="mt-2"><small>* Vi holder stengt 24.06</small></li>
                     </ul>
+
+                    <div id="vacation-hours-message" style="display: none;" class="text-center p-4 bg-red-100 rounded-lg">
+                        <p class="font-bold text-red-700">Vi har feriestengt!</p>
+                        <p class="text-gray-700 mt-2">Velkommen tilbake til oss <strong id="reopen-date-hours"></strong>.</p>
+                        <p class="mt-4">🌴☀️</p>
+                    </div>
+
                 </div>
                 <div class="card p-6">
                     <h3 class="text-2xl font-semibold text-gray-600 mb-3"><i class="fas fa-map-marker-alt mr-2"></i>Finn Oss</h3>
@@ -1824,7 +1835,6 @@
         <div class="container mx-auto px-6 text-center">
             <div class="flex justify-center space-x-6 mb-8">
                 <a href="https://www.facebook.com/randabergtakeaway" class="text-3xl hover:text-yellow-400 transition-colors" aria-label="Facebook"><i class="fab fa-facebook-square"></i></a>
-                
                 <a href="https://g.page/r/CXaYctVCBCMMEBM/review" class="text-3xl hover:text-yellow-400 transition-colors" aria-label="Instagram"><i class="fab fa-google"></i></a>
             </div>
             <p class="text-sm">© <span id="currentYear"></span> Randaberg Take Away. Alle rettigheter reservert.</p>
@@ -1834,31 +1844,85 @@
     </footer>
 
     <script>
-        // Hamburger Meny knapp
+        // Hamburger Menu knapp (your existing script)
         const menuToggle = document.getElementById('menu-toggle');
         const mobileMenu = document.getElementById('mobile-menu');
-        const desktopMenuLinks = document.getElementById('desktop-menu-links'); // To ensure it's hidden if JS disabled and then enabled
-
         if (menuToggle && mobileMenu) {
             menuToggle.addEventListener('click', () => {
                 mobileMenu.classList.toggle('hidden');
             });
-            // Optional: Close mobile menu when a link is clicked
             const mobileNavLinks = mobileMenu.querySelectorAll('a');
             mobileNavLinks.forEach(link => {
                 link.addEventListener('click', () => {
-                    // Smooth scroll to section
-                    const targetId = link.getAttribute('href').substring(1);
-                    const targetElement = document.getElementById(targetId);
-                    if (targetElement) {
-                        // targetElement.scrollIntoView({ behavior: 'smooth' }); // Already handled by CSS scroll-behavior
-                    }
-                    // Hide menu after click
                     mobileMenu.classList.add('hidden');
                 });
             });
         }
         document.getElementById('currentYear').textContent = new Date().getFullYear();
     </script>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // --- EDIT YOUR VACATION DATES HERE ---
+        // Use YYYY-MM-DD format. The closing period is from startDate up to (but not including) endDate.
+        const vacationStartDate = new Date('2025-07-07T00:00:00'); // Example: Start of day July 15
+        const vacationEndDate = new Date('2025-08-09T00:00:00');   // Example: End of day August 4 (reopening Aug 5)
+        // --- END OF EDITABLE AREA ---
+
+        const currentDate = new Date();
+
+        // Check if the current date is within the vacation period
+        if (currentDate >= vacationStartDate && currentDate < vacationEndDate) {
+            // --- 1. GET THE HTML ELEMENTS ---
+            const vacationNotice = document.getElementById('vacation-notice');
+            const regularHours = document.getElementById('regular-hours');
+            const vacationHoursMessage = document.getElementById('vacation-hours-message');
+            const reopenDateBanner = document.getElementById('reopen-date-banner');
+            const reopenDateHours = document.getElementById('reopen-date-hours');
+            
+            // --- 2. SHOW THE VACATION MESSAGES ---
+            if (vacationNotice) vacationNotice.style.display = 'block';
+            if (vacationHoursMessage) vacationHoursMessage.style.display = 'block';
+
+            // --- 3. HIDE THE REGULAR HOURS ---
+            if (regularHours) regularHours.style.display = 'none';
+
+            // --- 4. DISPLAY THE REOPENING DATE ---
+            // Format the reopening date nicely (e.g., "tirsdag 5. august")
+            const reopenDate = new Date(vacationEndDate);
+            const options = { weekday: 'long', day: 'numeric', month: 'long' };
+            const formattedReopenDate = reopenDate.toLocaleDateString('nb-NO', options);
+            
+            if (reopenDateBanner) reopenDateBanner.textContent = formattedReopenDate;
+            if (reopenDateHours) reopenDateHours.textContent = formattedReopenDate;
+            
+            // --- 5. UPDATE THE SEO/SCHEMA DATA ---
+            const schemaScript = document.getElementById('restaurant-schema');
+            if (schemaScript) {
+                try {
+                    const schemaData = JSON.parse(schemaScript.textContent);
+
+                    // Add special closing hours for the vacation period
+                    schemaData.specialOpeningHoursSpecification = {
+                        "@type": "OpeningHoursSpecification",
+                        "validFrom": vacationStartDate.toISOString().split('T')[0], // "2025-07-15"
+                        "validThrough": new Date(vacationEndDate - 1).toISOString().split('T')[0], // "2025-08-04"
+                        "opens": "00:00",  // Indicates closed for the entire day
+                        "closes": "00:00"
+                    };
+
+                    // To be safe, also set regular opening hours to empty during vacation
+                    schemaData.openingHoursSpecification = [];
+                    
+                    // Update the script tag with the new data
+                    schemaScript.textContent = JSON.stringify(schemaData, null, 2);
+                } catch (e) {
+                    console.error('Could not parse or update schema data:', e);
+                }
+            }
+        }
+    });
+    </script>
+
 </body>
 </html>
