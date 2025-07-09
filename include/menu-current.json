@@ -2,122 +2,3449 @@
   "restaurant": "Randaberg Take Away",
   "currency": "NOK",
   "menu": [
+    // --- Kokkens Spesial ---
     {
-      "id": "dish-046",
+      "id": "dish-053",
+      "dish_number": "53",
       "name": {
-        "no": "Stekte kongereker på kinesisk vis",
-        "en": "King prawns in Chinese style"
+        "no": "Husets spesial (Kokkens Spesial)",
+        "en": "House special (Chef's Special)"
       },
       "description": {
-        "no": "Sterk rett med stekte kongereker på kinesisk vis.",
-        "en": "Spicy dish with stir-fried king prawns in Chinese style."
+        "no": "Oksekjøtt, kylling, svinekjøtt og kongereker, woket med ferske grønnsaker.",
+        "en": "Beef, chicken, pork, and king prawns, wok-fried with fresh vegetables."
       },
+      "image_url": "https://your-restaurant.com/img/menu/dish-053.jpg",
+      "price": {
+        "takeaway": 230,
+        "dine_in": 259
+      },
+      "category": "Kokkens Spesial",
+      "ingredients": ["oksekjøtt", "kylling", "svinekjøtt", "kongereker", "grønnsaker", "soya"],
+      "tags": ["spesial", "kombinasjon", "wok"],
+      "allergens": ["soy", "crustaceans"],
+      "allergen_notes": {
+        "no": "Inneholder soya og skalldyr.",
+        "en": "Contains soy and crustaceans."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 0
+    },
+    {
+      "id": "dish-054",
+      "dish_number": "54",
+      "name": {
+        "no": "Stekte grønnsaker (Vegetar)",
+        "en": "Stir-fried Vegetables (Vegetarian)"
+      },
+      "description": {
+        "no": "Et utvalg av ferske, wokkede grønnsaker. Serveres med ditt valg av karrisaus eller chilisaus.",
+        "en": "A selection of fresh, wok-fried vegetables. Served with your choice of curry sauce or chili sauce."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-054.jpg",
+      "price": {
+        "takeaway": 190,
+        "dine_in": 210
+      },
+      "category": "Kokkens Spesial",
+      "ingredients": ["grønnsaker", "soya"],
+      "tags": ["vegetar", "wok", "grønnsaker"],
+      "allergens": ["soy"],
+      "allergen_notes": {
+        "no": "Inneholder soya. Valg av saus kan påvirke allergener.",
+        "en": "Contains soy. Choice of sauce may affect allergens."
+      },
+      "dietary": ["vegetarian"],
+      "available": true,
+      "spice_level": 1,
+      "customization_options": [
+        {
+          "id": "sauce-choice-054",
+          "type": "radio",
+          "title": {
+            "no": "Velg Saus",
+            "en": "Choose Sauce"
+          },
+          "options": [
+            { "name": { "no": "Karrisaus", "en": "Curry sauce" }, "price_modifier": 0, "default": true },
+            { "name": { "no": "Chilisaus (sterk)", "en": "Chili sauce (spicy)" }, "price_modifier": 0 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dish-055",
+      "dish_number": "55",
+      "name": {
+        "no": "Friterte kyllingvinger",
+        "en": "Fried chicken wings"
+      },
+      "description": {
+        "no": "Sprø, friterte kyllingvinger servert med ditt valg av karrisaus eller sursøt saus.",
+        "en": "Crispy, fried chicken wings served with your choice of curry sauce or sweet and sour sauce."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-055.jpg",
+      "price": {
+        "takeaway": 190,
+        "dine_in": 210
+      },
+      "category": "Kokkens Spesial",
+      "ingredients": ["kyllingvinger", "hvetemel", "egg"],
+      "tags": ["kylling", "fritert", "vinger"],
+      "allergens": ["egg", "gluten"],
+      "allergen_notes": {
+        "no": "Inneholder egg og gluten. Valg av saus kan påvirke allergener.",
+        "en": "Contains egg and gluten. Choice of sauce may affect allergens."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 0,
+      "customization_options": [
+        {
+          "id": "sauce-choice-055",
+          "type": "radio",
+          "title": {
+            "no": "Velg Saus",
+            "en": "Choose Sauce"
+          },
+          "options": [
+            { "name": { "no": "Karrisaus", "en": "Curry sauce" }, "price_modifier": 0, "default": true, "allergens": ["coconut-milk"] },
+            { "name": { "no": "Søt-sur saus", "en": "Sweet and sour sauce" }, "price_modifier": 0 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dish-505",
+      "dish_number": "505",
+      "name": {
+        "no": "Stekte grønnsaker med cashewnøtter (Vegansk)",
+        "en": "Stir-fried vegetables with cashews (Vegan)"
+      },
+      "description": {
+        "no": "En vegansk rett med ferske, wokkede grønnsaker og cashewnøtter i en smaksrik saus.",
+        "en": "A vegan dish with fresh, wok-fried vegetables and cashews in a flavorful sauce."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-505.jpg",
+      "price": {
+        "takeaway": 195,
+        "dine_in": 220
+      },
+      "category": "Kokkens Spesial",
+      "ingredients": ["grønnsaker", "cashewnøtter", "soya"],
+      "tags": ["vegansk", "vegetar", "wok", "grønnsaker", "cashewnøtter"],
+      "allergens": ["soy", "cashews"],
+      "allergen_notes": {
+        "no": "Inneholder soya og cashewnøtter.",
+        "en": "Contains soy and cashews."
+      },
+      "dietary": ["vegan", "vegetarian"],
+      "available": true,
+      "spice_level": 0
+    },
+    // --- Middag for flere personer ---
+    {
+      "id": "deal-A",
+      "dish_number": "A",
+      "name": {
+        "no": "Middag for 2 personer",
+        "en": "Dinner for 2 People"
+      },
+      "description": {
+        "no": "En komplett middagspakke for to personer. Inkluderer ris.",
+        "en": "A complete dinner package for two people. Includes rice."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/deal-A.jpg",
+      "price": {
+        "takeaway": 460,
+        "dine_in": 530
+      },
+      "category": "Middag for flere personer",
+      "included_dishes": [
+        {
+          "name": {
+            "no": "Kyllingspyd med Satay",
+            "en": "Chicken Skewers with Satay"
+          }
+        },
+        {
+          "name": {
+            "no": "Oksekjøtt med brokkoli",
+            "en": "Beef with broccoli"
+          }
+        },
+        {
+          "name": {
+            "no": "Svinekjøtt med ingefær og chili (sterk)",
+            "en": "Pork with ginger and chili (spicy)"
+          }
+        }
+      ],
+      "tags": ["deal", "meny", "2 personer", "middag"],
+      "allergens": ["soy", "egg", "peanuts", "gluten"],
+      "allergen_notes": {
+        "no": "Inneholder soya, egg, peanøtter og gluten.",
+        "en": "Contains soy, egg, peanuts and gluten."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 2
+    },
+    {
+      "id": "deal-B",
+      "dish_number": "B",
+      "name": {
+        "no": "Middag for 3 personer",
+        "en": "Dinner for 3 People"
+      },
+      "description": {
+        "no": "En komplett middagspakke for tre personer. Inkluderer ris.",
+        "en": "A complete dinner package for three people. Includes rice."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/deal-B.jpg",
+      "price": {
+        "takeaway": 550,
+        "dine_in": 710
+      },
+      "category": "Middag for flere personer",
+      "included_dishes": [
+        {
+          "name": {
+            "no": "Kinesisk pepper biff",
+            "en": "Chinese pepper beef"
+          }
+        },
+        {
+          "name": {
+            "no": "Stekte kongereker på Kinesisk-vis (sterk)",
+            "en": "Stir-fried king prawns in Chinese style (spicy)"
+          }
+        },
+        {
+          "name": {
+            "no": "Fritert svinekjøtt med søt-sur saus",
+            "en": "Fried pork with sweet and sour sauce"
+          }
+        }
+      ],
+      "tags": ["deal", "meny", "3 personer", "middag"],
+      "allergens": ["soy", "egg", "gluten", "crustaceans"],
+      "allergen_notes": {
+        "no": "Inneholder soya, egg, gluten og skalldyr.",
+        "en": "Contains soy, egg, gluten and crustaceans."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 2
+    },
+    {
+      "id": "deal-C",
+      "dish_number": "C",
+      "name": {
+        "no": "Middag for 4 personer",
+        "en": "Dinner for 4 People"
+      },
+      "description": {
+        "no": "En stor middagspakke for fire personer. Inkluderer ris.",
+        "en": "A large dinner package for four people. Includes rice."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/deal-C.jpg",
+      "price": {
+        "takeaway": 860,
+        "dine_in": 1150
+      },
+      "category": "Middag for flere personer",
+      "included_dishes": [
+        {
+          "name": {
+            "no": "4 Vårruller",
+            "en": "4 Spring rolls"
+          }
+        },
+        {
+          "name": {
+            "no": "Oksekjøtt med grønnsaker",
+            "en": "Beef with vegetables"
+          }
+        },
+        {
+          "name": {
+            "no": "Kongereker med brokkoli",
+            "en": "King prawns with broccoli"
+          }
+        },
+        {
+          "name": {
+            "no": "Fritert kylling med søt-sur saus",
+            "en": "Fried chicken with sweet and sour sauce"
+          }
+        },
+        {
+          "name": {
+            "no": "Stekte svineribber på Kinesisk-vis (sterk)",
+            "en": "Fried spare-ribs in Chinese style (spicy)"
+          }
+        }
+      ],
+      "tags": ["deal", "meny", "4 personer", "middag"],
+      "allergens": ["soy", "egg", "gluten", "crustaceans"],
+      "allergen_notes": {
+        "no": "Inneholder soya, egg, gluten og skalldyr.",
+        "en": "Contains soy, egg, gluten and crustaceans."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 2
+    },
+    // --- Forretter / Appetizers ---
+    {
+      "id": "dish-001",
+      "dish_number": "1",
+      "name": {
+        "no": "Vårrull",
+        "en": "Spring Roll"
+      },
+      "description": {
+        "no": "Hjemmelaget vårrull servert med søt chilisaus.",
+        "en": "Homemade spring roll served with sweet chili sauce."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-001.jpg",
+      "price": {
+        "takeaway": 45,
+        "dine_in": 65
+      },
+      "category": "Forretter",
+      "ingredients": [],
+      "tags": ["forrett", "klassiker"],
+      "allergens": ["egg", "gluten"],
+      "allergen_notes": {
+        "no": "Inneholder egg og gluten.",
+        "en": "Contains egg and gluten."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 0
+    },
+    {
+      "id": "dish-002",
+      "dish_number": "2",
+      "name": {
+        "no": "Satay kylling (2 stk.)",
+        "en": "Satay chicken (2 pcs)"
+      },
+      "description": {
+        "no": "Kyllingspyd servert med en smaksrik peanøttsaus.",
+        "en": "Chicken skewers served with a flavorful peanut sauce."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-002.jpg",
+      "price": {
+        "takeaway": 85,
+        "dine_in": 100
+      },
+      "category": "Forretter",
+      "ingredients": ["kylling", "peanøtter", "egg", "hvetemel"],
+      "tags": ["forrett", "satay", "kylling"],
+      "allergens": ["egg", "peanuts", "gluten"],
+      "allergen_notes": {
+        "no": "Inneholder egg, peanøtter og gluten.",
+        "en": "Contains egg, peanuts and gluten."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 1
+    },
+    {
+      "id": "dish-003",
+      "dish_number": "3",
+      "name": {
+        "no": "Kongereker vårruller (2 stk.)",
+        "en": "King prawns spring rolls (2 pcs)"
+      },
+      "description": {
+        "no": "Hjemmelagde vårruller fylt med kongereker og grønnsaker.",
+        "en": "Homemade spring rolls filled with king prawns and vegetables."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-003.jpg",
+      "price": {
+        "takeaway": 85,
+        "dine_in": 100
+      },
+      "category": "Forretter",
+      "ingredients": ["kongereker", "grønnsaker", "hvetemel", "egg"],
+      "tags": ["forrett", "sjømat"],
+      "allergens": ["egg", "gluten", "crustaceans"],
+      "allergen_notes": {
+        "no": "Inneholder egg, gluten og skalldyr.",
+        "en": "Contains egg, gluten and crustaceans."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 0
+    },
+    {
+      "id": "dish-004",
+      "dish_number": "4",
+      "name": {
+        "no": "Satay kongereker (2 stk.)",
+        "en": "Satay king prawns"
+      },
+      "description": {
+        "no": "Spyd med kongereker, servert med en smaksrik peanøttsaus.",
+        "en": "King prawn skewers, served with a flavorful peanut sauce."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-004.jpg",
+      "price": {
+        "takeaway": 95,
+        "dine_in": 110
+      },
+      "category": "Forretter",
+      "ingredients": ["kongereker", "peanøtter", "egg", "hvetemel"],
+      "tags": ["forrett", "satay", "sjømat"],
+      "allergens": ["egg", "peanuts", "gluten", "crustaceans"],
+      "allergen_notes": {
+        "no": "Inneholder egg, peanøtter, gluten og skalldyr.",
+        "en": "Contains egg, peanuts, gluten and crustaceans."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 1
+    },
+    {
+      "id": "dish-005",
+      "dish_number": "5",
+      "name": {
+        "no": "Maissuppe med kylling",
+        "en": "Chicken corn soup"
+      },
+      "description": {
+        "no": "En kremet og mild suppe med mais og kyllingbiter.",
+        "en": "A creamy and mild soup with corn and pieces of chicken."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-005.jpg",
+      "price": {
+        "takeaway": 95,
+        "dine_in": 110
+      },
+      "category": "Forretter",
+      "ingredients": ["mais", "kylling", "egg"],
+      "tags": ["forrett", "suppe"],
+      "allergens": ["egg"],
+      "allergen_notes": {
+        "no": "Inneholder egg.",
+        "en": "Contains egg."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 0
+    },
+    {
+      "id": "dish-006",
+      "dish_number": "6",
+      "name": {
+        "no": "Pekingsuppe",
+        "en": "Peking soup"
+      },
+      "description": {
+        "no": "En klassisk kinesisk suppe, syrlig og sterk i smaken.",
+        "en": "A classic Chinese soup, with a hot and sour flavor."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-006.jpg",
+      "price": {
+        "takeaway": 95,
+        "dine_in": 110
+      },
+      "category": "Forretter",
+      "ingredients": ["sopp", "bambusskudd", "egg", "reker"],
+      "tags": ["forrett", "suppe", "sterk"],
+      "allergens": ["soy", "egg", "crustaceans"],
+      "allergen_notes": {
+        "no": "Inneholder soya, egg og skalldyr.",
+        "en": "Contains soy, egg and crustaceans."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 3
+    },
+    {
+      "id": "dish-606",
+      "dish_number": "606",
+      "name": {
+        "no": "Tom Yum suppe med kongereker",
+        "en": "Tom Yum soup with king prawns"
+      },
+      "description": {
+        "no": "En sterk og syrlig thailandsk suppe med kongereker.",
+        "en": "A hot and sour Thai soup with king prawns."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-606.jpg",
+      "price": {
+        "takeaway": 110,
+        "dine_in": 140
+      },
+      "category": "Forretter",
+      "ingredients": ["kongereker", "kokosmelk", "chili", "sitronskall"],
+      "tags": ["forrett", "suppe", "sterk", "thailandsk"],
+      "allergens": ["coconut-milk", "crustaceans"],
+      "allergen_notes": {
+        "no": "Inneholder kokosmelk og skalldyr.",
+        "en": "Contains coconut milk and crustaceans."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 4
+    },
+    {
+      "id": "dish-007",
+      "dish_number": "7",
+      "name": {
+        "no": "Friterte kyllingvinger med salat (4 stk)",
+        "en": "Deep fried chicken wings with salad"
+      },
+      "description": {
+        "no": "Sprø, friterte kyllingvinger servert med en frisk salat.",
+        "en": "Crispy, deep-fried chicken wings served with a fresh salad."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-007.jpg",
+      "price": {
+        "takeaway": 85,
+        "dine_in": 110
+      },
+      "category": "Forretter",
+      "ingredients": ["kyllingvinger", "salat", "hvetemel", "egg"],
+      "tags": ["forrett", "kylling"],
+      "allergens": ["egg", "gluten"],
+      "allergen_notes": {
+        "no": "Inneholder egg og gluten.",
+        "en": "Contains egg and gluten."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 0
+    },
+    {
+      "id": "dish-070",
+      "dish_number": "70",
+      "name": {
+        "no": "Svineribber med salat",
+        "en": "Spare-ribs with salad"
+      },
+      "description": {
+        "no": "Møre svineribber marinert og grillet, servert med salat.",
+        "en": "Tender spare-ribs marinated and grilled, served with salad."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-070.jpg",
+      "price": {
+        "takeaway": 105,
+        "dine_in": 130
+      },
+      "category": "Forretter",
+      "ingredients": ["svineribbe", "salat", "hvetemel", "egg"],
+      "tags": ["forrett", "svin"],
+      "allergens": ["egg", "gluten"],
+      "allergen_notes": {
+        "no": "Inneholder egg og gluten.",
+        "en": "Contains egg and gluten."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 0
+    },
+    // --- Nudler / Noodles ---
+    {
+      "id": "dish-035",
+      "dish_number": "35",
+      "name": {
+        "no": "Stekte nudler med kylling på Thai-vis (sterk)",
+        "en": "Noodles in Thai style with chicken (spicy)"
+      },
+      "description": {
+        "no": "Stekte nudler med kylling, grønnsaker og en sterk, syrlig saus på thailandsk vis.",
+        "en": "Stir-fried noodles with chicken, vegetables, and a spicy, sour Thai-style sauce."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-035.jpg",
+      "price": {
+        "takeaway": 195,
+        "dine_in": 220
+      },
+      "category": "Nudler",
+      "ingredients": ["nudler", "kylling", "egg", "peanøtter", "grønnsaker"],
+      "tags": ["nudler", "kylling", "thai", "sterk"],
+      "allergens": ["egg", "peanuts"],
+      "allergen_notes": {
+        "no": "Inneholder egg og peanøtter.",
+        "en": "Contains egg and peanuts."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 4
+    },
+    {
+      "id": "dish-036",
+      "dish_number": "36",
+      "name": {
+        "no": "Svinekjøtt i skiver med ingefær og chilli saus (sterk)",
+        "en": "Pork with ginger and chilli sauce (spicy)"
+      },
+      "description": {
+        "no": "Svinekjøtt i skiver med en aromatisk og sterk saus av ingefær og chili. Serveres med nudler.",
+        "en": "Sliced pork with an aromatic and spicy ginger and chili sauce. Served with noodles."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-036.jpg",
+      "price": {
+        "takeaway": 195,
+        "dine_in": 220
+      },
+      "category": "Nudler",
+      "ingredients": ["svinekjøtt", "ingefær", "chili", "soya", "hvetemel", "nudler"],
+      "tags": ["nudler", "svin", "sterk", "ingefær"],
+      "allergens": ["soy", "gluten"],
+      "allergen_notes": {
+        "no": "Inneholder soya og gluten.",
+        "en": "Contains soy and gluten."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 4
+    },
+    {
+      "id": "dish-037",
+      "dish_number": "37",
+      "name": {
+        "no": "Stekte nudler med oksekjøtt på Kinesisk-vis",
+        "en": "Noodles with beef"
+      },
+      "description": {
+        "no": "Klassiske stekte nudler med mørt oksekjøtt og grønnsaker i en kinesisk saus.",
+        "en": "Classic stir-fried noodles with tender beef and vegetables in a Chinese sauce."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-037.jpg",
+      "price": {
+        "takeaway": 195,
+        "dine_in": 220
+      },
+      "category": "Nudler",
+      "ingredients": ["nudler", "oksekjøtt", "soya", "egg", "grønnsaker"],
+      "tags": ["nudler", "okse", "kinesisk"],
+      "allergens": ["soy", "egg"],
+      "allergen_notes": {
+        "no": "Inneholder soya og egg.",
+        "en": "Contains soy and egg."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 0
+    },
+    {
+      "id": "dish-038",
+      "dish_number": "38",
+      "name": {
+        "no": "Stekte nudler med oksekjøtt på Thai-vis (sterk)",
+        "en": "Noodles in Thai style with beef (spicy)"
+      },
+      "description": {
+        "no": "Stekte nudler med oksekjøtt, grønnsaker og en sterk, syrlig saus på thailandsk vis.",
+        "en": "Stir-fried noodles with beef, vegetables, and a spicy, sour Thai-style sauce."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-038.jpg",
+      "price": {
+        "takeaway": 195,
+        "dine_in": 220
+      },
+      "category": "Nudler",
+      "ingredients": ["nudler", "oksekjøtt", "egg", "peanøtter", "grønnsaker"],
+      "tags": ["nudler", "okse", "thai", "sterk"],
+      "allergens": ["egg", "peanuts"],
+      "allergen_notes": {
+        "no": "Inneholder egg og peanøtter.",
+        "en": "Contains egg and peanuts."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 4
+    },
+    {
+      "id": "dish-306",
+      "dish_number": "306",
+      "name": {
+        "no": "Stekte nudler med kongereker på Thai-vis (sterk)",
+        "en": "Noodles in Thai style with king prawns (spicy)"
+      },
+      "description": {
+        "no": "Stekte nudler med kongereker, grønnsaker og en sterk, syrlig saus på thailandsk vis.",
+        "en": "Stir-fried noodles with king prawns, vegetables, and a spicy, sour Thai-style sauce."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-306.jpg",
+      "price": {
+        "takeaway": 220,
+        "dine_in": 240
+      },
+      "category": "Nudler",
+      "ingredients": ["nudler", "kongereker", "egg", "peanøtter", "grønnsaker"],
+      "tags": ["nudler", "kongereker", "sjømat", "thai", "sterk"],
+      "allergens": ["egg", "peanuts", "crustaceans"],
+      "allergen_notes": {
+        "no": "Inneholder egg, peanøtter og skalldyr.",
+        "en": "Contains egg, peanuts and crustaceans."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 4
+    },
+    {
+      "id": "dish-307",
+      "dish_number": "307",
+      "name": {
+        "no": "Stekte nudler med oksekjøtt, svinekjøtt, kylling og kongereker",
+        "en": "Noodles with beef, pork, chicken and king prawns"
+      },
+      "description": {
+        "no": "En kombinasjon av stekte nudler med alle våre beste proteiner.",
+        "en": "A combination of stir-fried noodles with all of our best proteins."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-307.jpg",
+      "price": {
+        "takeaway": 220,
+        "dine_in": 250
+      },
+      "category": "Nudler",
+      "ingredients": ["nudler", "oksekjøtt", "svinekjøtt", "kylling", "kongereker", "soya", "egg"],
+      "tags": ["nudler", "kombinasjon", "spesial"],
+      "allergens": ["soy", "egg", "crustaceans"],
+      "allergen_notes": {
+        "no": "Inneholder soya, egg og skalldyr.",
+        "en": "Contains soy, egg and crustaceans."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 0
+    },
+    {
+      "id": "dish-308",
+      "dish_number": "308",
+      "name": {
+        "no": "Stekte nudler med grønnsaker (vegetar)",
+        "en": "Noodles with vegetables"
+      },
+      "description": {
+        "no": "En vegetarisk rett med stekte nudler og et utvalg av ferske grønnsaker.",
+        "en": "A vegetarian dish with stir-fried noodles and a selection of fresh vegetables."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-308.jpg",
+      "price": {
+        "takeaway": 185,
+        "dine_in": 210
+      },
+      "category": "Nudler",
+      "ingredients": ["nudler", "grønnsaker", "soya", "egg"],
+      "tags": ["nudler", "vegetar"],
+      "allergens": ["soy", "egg"],
+      "allergen_notes": {
+        "no": "Inneholder soya og egg.",
+        "en": "Contains soy and egg."
+      },
+      "dietary": ["vegetarian"],
+      "available": true,
+      "spice_level": 0
+    },
+    {
+      "id": "dish-080",
+      "dish_number": "80",
+      "name": {
+        "no": "Singapor nudler med kylling eller oksekjøtt (sterk)",
+        "en": "Singapor noodles with chicken or beef (spicy)"
+      },
+      "description": {
+        "no": "Tynne risnudler stekt i en karrisaus med grønnsaker og ditt valg av protein.",
+        "en": "Thin rice noodles stir-fried in a curry sauce with vegetables and your choice of protein."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-080.jpg",
+      "price": {
+        "takeaway": 195,
+        "dine_in": 220
+      },
+      "category": "Nudler",
+      "ingredients": ["risnudler", "egg", "karri", "grønnsaker"],
+      "tags": ["nudler", "singapore", "sterk"],
+      "allergens": ["egg"],
+      "allergen_notes": {
+        "no": "Inneholder egg.",
+        "en": "Contains egg."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 4,
+      "customization_options": [
+        {
+          "id": "protein-choice-080",
+          "type": "radio",
+          "title": {
+            "no": "Velg Protein",
+            "en": "Choose Protein"
+          },
+          "options": [
+            {
+              "name": { "no": "Kylling", "en": "Chicken" },
+              "price_modifier": 0,
+              "default": true
+            },
+            {
+              "name": { "no": "Oksekjøtt", "en": "Beef" },
+              "price_modifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dish-081",
+      "dish_number": "81",
+      "name": {
+        "no": "Stekte nudler med svinekjøtt på Thai-vis (sterk)",
+        "en": "Noodles Thai style with pork (spicy)"
+      },
+      "description": {
+        "no": "Stekte nudler med svinekjøtt, grønnsaker og en sterk, syrlig saus på thailandsk vis.",
+        "en": "Stir-fried noodles with pork, vegetables, and a spicy, sour Thai-style sauce."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-081.jpg",
+      "price": {
+        "takeaway": 195,
+        "dine_in": 220
+      },
+      "category": "Nudler",
+      "ingredients": ["nudler", "svinekjøtt", "egg", "peanøtter", "grønnsaker"],
+      "tags": ["nudler", "svin", "thai", "sterk"],
+      "allergens": ["egg", "peanuts"],
+      "allergen_notes": {
+        "no": "Inneholder egg og peanøtter.",
+        "en": "Contains egg and peanuts."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 4
+    },
+    // --- Ris / Rice ---
+    {
+      "id": "dish-039",
+      "dish_number": "39",
+      "name": {
+        "no": "Stekt ris med kongereker",
+        "en": "Fried rice with king prawns"
+      },
+      "description": {
+        "no": "Klassisk stekt ris med saftige kongereker, egg og grønnsaker.",
+        "en": "Classic fried rice with juicy king prawns, egg, and vegetables."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-039.jpg",
+      "price": {
+        "takeaway": 220,
+        "dine_in": 240
+      },
+      "category": "Ris",
+      "ingredients": ["ris", "kongereker", "egg", "soya", "grønnsaker"],
+      "tags": ["ris", "sjømat", "kongereker"],
+      "allergens": ["soy", "egg", "crustaceans"],
+      "allergen_notes": {
+        "no": "Inneholder soya, egg og skalldyr.",
+        "en": "Contains soy, egg and crustaceans."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 0
+    },
+    {
+      "id": "dish-309",
+      "dish_number": "309",
+      "name": {
+        "no": "Stekt ris med bacon og oksekjøtt",
+        "en": "Fried rice with bacon and beef"
+      },
+      "description": {
+        "no": "Smakfull stekt ris med sprøstekt bacon og mørt oksekjøtt.",
+        "en": "Flavorful fried rice with crispy bacon and tender beef."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-309.jpg",
+      "price": {
+        "takeaway": 185,
+        "dine_in": 210
+      },
+      "category": "Ris",
+      "ingredients": ["ris", "bacon", "oksekjøtt", "egg", "soya"],
+      "tags": ["ris", "bacon", "okse"],
+      "allergens": ["soy", "egg"],
+      "allergen_notes": {
+        "no": "Inneholder soya og egg.",
+        "en": "Contains soy and egg."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 0
+    },
+    {
+      "id": "dish-040",
+      "dish_number": "40",
+      "name": {
+        "no": "Stekt ris med kylling og reker",
+        "en": "Fried rice with chicken and shrimps"
+      },
+      "description": {
+        "no": "En populær klassiker med stekt ris, kyllingbiter og reker.",
+        "en": "A popular classic with fried rice, pieces of chicken, and shrimps."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-040.jpg",
+      "price": {
+        "takeaway": 165,
+        "dine_in": 185
+      },
+      "category": "Ris",
+      "ingredients": ["ris", "kylling", "reker", "egg"],
+      "tags": ["ris", "kylling", "reker"],
+      "allergens": ["egg", "crustaceans"],
+      "allergen_notes": {
+        "no": "Inneholder egg og skalldyr.",
+        "en": "Contains egg and crustaceans."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 0
+    },
+    {
+      "id": "dish-041",
+      "dish_number": "41",
+      "name": {
+        "no": "Stekt ris med kylling, reker og karri",
+        "en": "Fried rice with chicken, shrimps and curry"
+      },
+      "description": {
+        "no": "Stekt ris med kylling og reker, smaksatt med aromatisk karri.",
+        "en": "Fried rice with chicken and shrimps, flavored with aromatic curry."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-041.jpg",
+      "price": {
+        "takeaway": 165,
+        "dine_in": 185
+      },
+      "category": "Ris",
+      "ingredients": ["ris", "kylling", "reker", "karri", "egg"],
+      "tags": ["ris", "kylling", "reker", "karri"],
+      "allergens": ["egg", "crustaceans"],
+      "allergen_notes": {
+        "no": "Inneholder egg og skalldyr.",
+        "en": "Contains egg and crustaceans."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 2
+    },
+    {
+      "id": "dish-401",
+      "dish_number": "401",
+      "name": {
+        "no": "Stekt ris med oksekjøtt",
+        "en": "Fried rice with beef"
+      },
+      "description": {
+        "no": "Stekt ris med mørt oksekjøtt, egg og grønnsaker.",
+        "en": "Fried rice with tender beef, egg, and vegetables."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-401.jpg",
+      "price": {
+        "takeaway": 185,
+        "dine_in": 210
+      },
+      "category": "Ris",
+      "ingredients": ["ris", "oksekjøtt", "egg", "soya"],
+      "tags": ["ris", "okse"],
+      "allergens": ["soy", "egg"],
+      "allergen_notes": {
+        "no": "Inneholder soya og egg.",
+        "en": "Contains soy and egg."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 0
+    },
+    {
+      "id": "dish-090",
+      "dish_number": "90",
+      "name": {
+        "no": "Stekt ris med kyllingspyd + 0.5L brus",
+        "en": "Fried rice with chicken skewer + 0.5L soda"
+      },
+      "description": {
+        "no": "En porsjon stekt ris servert med et kyllingspyd. Inkluderer en 0.5L brus.",
+        "en": "A portion of fried rice served with a chicken skewer. Includes a 0.5L soda."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-090.jpg",
+      "price": {
+        "takeaway": 210,
+        "dine_in": 240
+      },
+      "category": "Ris",
+      "ingredients": ["ris", "kyllingspyd", "soya", "egg", "peanøtter", "hvetemel"],
+      "tags": ["ris", "kylling", "deal", "meny"],
+      "allergens": ["soy", "egg", "peanuts", "gluten"],
+      "allergen_notes": {
+        "no": "Inneholder soya, egg, peanøtter og gluten.",
+        "en": "Contains soy, egg, peanuts and gluten."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 1
+    },
+    // --- Kylling / Chicken ---
+    {
+      "id": "dish-008",
+      "dish_number": "8",
+      "name": {
+        "no": "Kylling med cashewnøtter",
+        "en": "Chicken with cashewnuts"
+      },
+      "description": {
+        "no": "Wok-stekt kylling med grønnsaker og cashewnøtter i en smaksrik saus.",
+        "en": "Wok-fried chicken with vegetables and cashew nuts in a flavorful sauce."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-008.jpg",
+      "price": {
+        "takeaway": 195,
+        "dine_in": 220
+      },
+      "category": "Kylling",
+      "ingredients": ["kylling", "cashewnøtter", "grønnsaker", "soya"],
+      "tags": ["kylling", "cashewnøtter", "wok"],
+      "allergens": ["soy", "cashews"],
+      "allergen_notes": {
+        "no": "Inneholder soya og cashewnøtter.",
+        "en": "Contains soy and cashews."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 0
+    },
+    {
+      "id": "dish-808",
+      "dish_number": "808",
+      "name": {
+        "no": "Kylling i skiver med grønnsaker",
+        "en": "Chicken Chop Suey"
+      },
+      "description": {
+        "no": "En klassisk Chop Suey med møre kyllingstrimler og et utvalg av ferske grønnsaker.",
+        "en": "A classic Chop Suey with tender chicken strips and a selection of fresh vegetables."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-808.jpg",
+      "price": {
+        "takeaway": 190,
+        "dine_in": 210
+      },
+      "category": "Kylling",
+      "ingredients": ["kylling", "grønnsaker", "soya"],
+      "tags": ["kylling", "chop suey", "klassiker"],
+      "allergens": ["soy"],
+      "allergen_notes": {
+        "no": "Inneholder soya.",
+        "en": "Contains soy."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 0
+    },
+    {
+      "id": "dish-009",
+      "dish_number": "9",
+      "name": {
+        "no": "Fritert kylling med søt-sur saus",
+        "en": "Sweet and sour chicken"
+      },
+      "description": {
+        "no": "Sprø, fritert kylling servert med en klassisk sursøt saus og grønnsaker.",
+        "en": "Crispy, deep-fried chicken served with a classic sweet and sour sauce and vegetables."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-009.jpg",
+      "price": {
+        "takeaway": 190,
+        "dine_in": 210
+      },
+      "category": "Kylling",
+      "ingredients": ["kylling", "ananas", "paprika", "hvetemel", "egg"],
+      "tags": ["kylling", "fritert", "sursøt"],
+      "allergens": ["egg", "gluten"],
+      "allergen_notes": {
+        "no": "Inneholder egg og gluten.",
+        "en": "Contains egg and gluten."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 0
+    },
+    {
+      "id": "dish-010",
+      "dish_number": "10",
+      "name": {
+        "no": "Kylling med pepper saus",
+        "en": "Chicken with pepper sauce"
+      },
+      "description": {
+        "no": "Møre kyllingbiter i en kraftig og aromatisk peppersaus.",
+        "en": "Tender pieces of chicken in a rich and aromatic pepper sauce."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-010.jpg",
+      "price": {
+        "takeaway": 190,
+        "dine_in": 210
+      },
+      "category": "Kylling",
+      "ingredients": ["kylling", "pepper", "soya", "grønnsaker"],
+      "tags": ["kylling", "pepper"],
+      "allergens": ["soy"],
+      "allergen_notes": {
+        "no": "Inneholder soya.",
+        "en": "Contains soy."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 2
+    },
+    {
+      "id": "dish-011",
+      "dish_number": "11",
+      "name": {
+        "no": "Kylling i skiver med karri saus",
+        "en": "Chicken curry"
+      },
+      "description": {
+        "no": "En mild og kremet karrirett med kylling og kokosmelk.",
+        "en": "A mild and creamy curry dish with chicken and coconut milk."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-011.jpg",
+      "price": {
+        "takeaway": 190,
+        "dine_in": 220
+      },
+      "category": "Kylling",
+      "ingredients": ["kylling", "karri", "kokosmelk", "grønnsaker"],
+      "tags": ["kylling", "karri"],
+      "allergens": ["coconut-milk"],
+      "allergen_notes": {
+        "no": "Inneholder kokosmelk.",
+        "en": "Contains coconut milk."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 2
+    },
+    {
+      "id": "dish-012",
+      "dish_number": "12",
+      "name": {
+        "no": "Kylling med rød karri og kokos saus (sterk)",
+        "en": "Chicken with red curry and coconut sauce (spicy)"
+      },
+      "description": {
+        "no": "En sterk og smaksrik thailandsk rød karri med kylling, grønnsaker og kokosmelk.",
+        "en": "A spicy and flavorful Thai red curry with chicken, vegetables, and coconut milk."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-012.jpg",
+      "price": {
+        "takeaway": 195,
+        "dine_in": 220
+      },
+      "category": "Kylling",
+      "ingredients": ["kylling", "rød karri", "kokosmelk", "bambusskudd"],
+      "tags": ["kylling", "karri", "thai", "sterk"],
+      "allergens": ["coconut-milk"],
+      "allergen_notes": {
+        "no": "Inneholder kokosmelk.",
+        "en": "Contains coconut milk."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 4
+    },
+    {
+      "id": "dish-013",
+      "dish_number": "13",
+      "name": {
+        "no": "Fritert kylling med ingefær og chilli saus (sterk)",
+        "en": "Fried chicken with ginger and chili sauce (spicy)"
+      },
+      "description": {
+        "no": "Sprø, fritert kylling vendt i en sterk og frisk saus av ingefær og chili.",
+        "en": "Crispy, fried chicken tossed in a spicy and fresh ginger and chili sauce."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-013.jpg",
+      "price": {
+        "takeaway": 195,
+        "dine_in": 220
+      },
+      "category": "Kylling",
+      "ingredients": ["kylling", "ingefær", "chili", "soya", "egg", "hvetemel"],
+      "tags": ["kylling", "fritert", "sterk", "ingefær"],
+      "allergens": ["soy", "egg", "gluten"],
+      "allergen_notes": {
+        "no": "Inneholder soya, egg og gluten.",
+        "en": "Contains soy, egg and gluten."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 3
+    },
+    {
+      "id": "dish-014",
+      "dish_number": "14",
+      "name": {
+        "no": "Kylling med Gon Bao saus (sterk)",
+        "en": "Chicken with Gon Bao sauce (spicy)"
+      },
+      "description": {
+        "no": "En Szechuan-klassiker med kylling, peanøtter, chili og grønnsaker.",
+        "en": "A Szechuan classic with chicken, peanuts, chili, and vegetables."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-014.jpg",
+      "price": {
+        "takeaway": 195,
+        "dine_in": 220
+      },
+      "category": "Kylling",
+      "ingredients": ["kylling", "peanøtter", "chili", "soya"],
+      "tags": ["kylling", "gon bao", "szechuan", "sterk"],
+      "allergens": ["soy", "peanuts"],
+      "allergen_notes": {
+        "no": "Inneholder soya og peanøtter.",
+        "en": "Contains soy and peanuts."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 4
+    },
+    {
+      "id": "dish-015",
+      "dish_number": "15",
+      "name": {
+        "no": "Kyllingspyd med Satay saus",
+        "en": "Chicken with Satay sauce"
+      },
+      "description": {
+        "no": "Grillede kyllingspyd servert med en rik og kremet peanøttbasert sataysaus.",
+        "en": "Grilled chicken skewers served with a rich and creamy peanut-based satay sauce."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-015.jpg",
+      "price": {
+        "takeaway": 195,
+        "dine_in": 220
+      },
+      "category": "Kylling",
+      "ingredients": ["kylling", "peanøtter", "egg", "hvetemel"],
+      "tags": ["kylling", "satay", "spyd"],
+      "allergens": ["egg", "peanuts", "gluten"],
+      "allergen_notes": {
+        "no": "Inneholder egg, peanøtter og gluten.",
+        "en": "Contains egg, peanuts and gluten."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 1
+    },
+    {
+      "id": "dish-016",
+      "dish_number": "16",
+      "name": {
+        "no": "Kylling med Sze Chuen saus (sterk)",
+        "en": "Chicken with Sze Chuen sauce (spicy)"
+      },
+      "description": {
+        "no": "En autentisk og sterk rett fra Szechuan-kjøkkenet med kylling og grønnsaker.",
+        "en": "An authentic and spicy dish from Szechuan cuisine with chicken and vegetables."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-016.jpg",
+      "price": {
+        "takeaway": 195,
+        "dine_in": 220
+      },
+      "category": "Kylling",
+      "ingredients": ["kylling", "szechuanpepper", "chili", "grønnsaker"],
+      "tags": ["kylling", "szechuan", "sterk"],
+      "allergens": [],
+      "allergen_notes": {
+        "no": "",
+        "en": ""
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 5
+    },
+    {
+      "id": "dish-017",
+      "dish_number": "17",
+      "name": {
+        "no": "Kylling i skiver med grønn karri og kokos saus (sterk)",
+        "en": "Chicken with green curry and coconut sauce (spicy)"
+      },
+      "description": {
+        "no": "En aromatisk og sterk thailandsk grønn karri med kylling, grønnsaker og kokosmelk.",
+        "en": "An aromatic and spicy Thai green curry with chicken, vegetables, and coconut milk."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-017.jpg",
+      "price": {
+        "takeaway": 195,
+        "dine_in": 220
+      },
+      "category": "Kylling",
+      "ingredients": ["kylling", "grønn karri", "kokosmelk", "bambusskudd"],
+      "tags": ["kylling", "karri", "thai", "sterk"],
+      "allergens": ["coconut-milk"],
+      "allergen_notes": {
+        "no": "Inneholder kokosmelk.",
+        "en": "Contains coconut milk."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 4
+    },
+    {
+      "id": "dish-107",
+      "dish_number": "107",
+      "name": {
+        "no": "Fritert kylling med hvitløk og chilli saus (sterk)",
+        "en": "Deep fried chicken with garlic and chili sauce (spicy)"
+      },
+      "description": {
+        "no": "Sprø, fritert kylling vendt i en sterk og aromatisk saus av hvitløk og chili.",
+        "en": "Crispy, fried chicken tossed in a spicy and aromatic garlic and chili sauce."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-107.jpg",
+      "price": {
+        "takeaway": 195,
+        "dine_in": 220
+      },
+      "category": "Kylling",
+      "ingredients": ["kylling", "hvitløk", "chili", "soya", "egg", "hvetemel"],
+      "tags": ["kylling", "fritert", "sterk", "hvitløk"],
+      "allergens": ["soy", "egg", "gluten"],
+      "allergen_notes": {
+        "no": "Inneholder soya, egg og gluten.",
+        "en": "Contains soy, egg and gluten."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 3
+    },
+    {
+      "id": "dish-108",
+      "dish_number": "108",
+      "name": {
+        "no": "Kyllingfilet på Kinesisk-vis (sterk)",
+        "en": "Chicken in Chinese style (spicy)"
+      },
+      "description": {
+        "no": "En spesiell og sterk husets rett med kyllingfilet og utvalgte kinesiske krydder.",
+        "en": "A special and spicy house dish with chicken fillet and selected Chinese spices."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-108.jpg",
+      "price": {
+        "takeaway": 195,
+        "dine_in": 220
+      },
+      "category": "Kylling",
+      "ingredients": ["kylling", "soya", "chili", "krydder"],
+      "tags": ["kylling", "kinesisk", "sterk", "spesial"],
+      "allergens": ["soy"],
+      "allergen_notes": {
+        "no": "Inneholder soya.",
+        "en": "Contains soy."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 3
+    },
+    // --- Fisk / Fish ---
+    {
+      "id": "dish-402",
+      "dish_number": "402",
+      "name": {
+        "no": "Fritert torsk i chilli saus (sterk)",
+        "en": "Codfish with chili sauce (spicy)"
+      },
+      "description": {
+        "no": "Sprø, fritert torsk servert med en sterk og smaksrik chilisaus.",
+        "en": "Crispy, fried codfish served with a spicy and flavorful chili sauce."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-402.jpg",
+      "price": {
+        "takeaway": 220,
+        "dine_in": 250
+      },
+      "category": "Fisk",
+      "ingredients": ["torsk", "chili", "soya", "egg", "hvetemel"],
+      "tags": ["fisk", "torsk", "fritert", "sterk"],
+      "allergens": ["soy", "egg", "fish", "gluten"],
+      "allergen_notes": {
+        "no": "Inneholder soya, egg, fisk og gluten.",
+        "en": "Contains soy, egg, fish and gluten."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 3
+    },
+    {
+      "id": "dish-403",
+      "dish_number": "403",
+      "name": {
+        "no": "Fritert torsk i søt-sur saus",
+        "en": "Sweet and sour codfish"
+      },
+      "description": {
+        "no": "Sprø, fritert torsk servert med en klassisk sursøt saus.",
+        "en": "Crispy, fried codfish served with a classic sweet and sour sauce."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-403.jpg",
+      "price": {
+        "takeaway": 220,
+        "dine_in": 250
+      },
+      "category": "Fisk",
+      "ingredients": ["torsk", "ananas", "paprika", "egg", "hvetemel"],
+      "tags": ["fisk", "torsk", "fritert", "sursøt"],
+      "allergens": ["egg", "fish", "gluten"],
+      "allergen_notes": {
+        "no": "Inneholder egg, fisk og gluten.",
+        "en": "Contains egg, fish and gluten."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 0
+    },
+    {
+      "id": "dish-404",
+      "dish_number": "404",
+      "name": {
+        "no": "Fritert torsk i rød karri og kokos saus (sterk)",
+        "en": "Codfish with red curry and coconut sauce (spicy)"
+      },
+      "description": {
+        "no": "Fritert torsk i en sterk og kremet thailandsk rød karri- og kokossaus.",
+        "en": "Fried codfish in a spicy and creamy Thai red curry and coconut sauce."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-404.jpg",
+      "price": {
+        "takeaway": 220,
+        "dine_in": 250
+      },
+      "category": "Fisk",
+      "ingredients": ["torsk", "rød karri", "kokosmelk", "soya", "egg", "hvetemel"],
+      "tags": ["fisk", "torsk", "fritert", "karri", "sterk", "thai"],
+      "allergens": ["soy", "egg", "coconut-milk", "fish", "gluten"],
+      "allergen_notes": {
+        "no": "Inneholder soya, egg, kokosmelk, fisk og gluten.",
+        "en": "Contains soy, egg, coconut milk, fish and gluten."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 4
+    },
+    // --- And / Duck ---
+    {
+      "id": "dish-042",
+      "dish_number": "42",
+      "name": {
+        "no": "Fritert and med peppersaus",
+        "en": "Duck with pepper sauce"
+      },
+      "description": {
+        "no": "Sprø, fritert and servert med en kraftig og aromatisk peppersaus.",
+        "en": "Crispy, fried duck served with a rich and aromatic pepper sauce."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-042.jpg",
+      "price": {
+        "takeaway": 240,
+        "dine_in": 270
+      },
+      "category": "And",
+      "ingredients": ["and", "pepper", "soya", "egg", "hvetemel"],
+      "tags": ["and", "fritert", "pepper"],
+      "allergens": ["soy", "egg", "gluten"],
+      "allergen_notes": {
+        "no": "Inneholder soya, egg og gluten.",
+        "en": "Contains soy, egg and gluten."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 2
+    },
+    {
+      "id": "dish-043",
+      "dish_number": "43",
+      "name": {
+        "no": "Fritert and med søt-sur saus",
+        "en": "Sweet and sour duck"
+      },
+      "description": {
+        "no": "En klassiker med sprø, fritert and servert med en frisk sursøt saus.",
+        "en": "A classic dish of crispy, fried duck served with a fresh sweet and sour sauce."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-043.jpg",
+      "price": {
+        "takeaway": 240,
+        "dine_in": 270
+      },
+      "category": "And",
+      "ingredients": ["and", "ananas", "paprika", "egg", "hvetemel"],
+      "tags": ["and", "fritert", "sursøt"],
+      "allergens": ["egg", "gluten"],
+      "allergen_notes": {
+        "no": "Inneholder egg og gluten.",
+        "en": "Contains egg and gluten."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 0
+    },
+    {
+      "id": "dish-044",
+      "dish_number": "44",
+      "name": {
+        "no": "Fritert and med chilli saus (sterk)",
+        "en": "Duck with chili sauce (spicy)"
+      },
+      "description": {
+        "no": "Sprø, fritert and servert med en sterk og smaksrik chilisaus.",
+        "en": "Crispy, fried duck served with a spicy and flavorful chili sauce."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-044.jpg",
+      "price": {
+        "takeaway": 240,
+        "dine_in": 270
+      },
+      "category": "And",
+      "ingredients": ["and", "chili", "soya", "egg", "hvetemel"],
+      "tags": ["and", "fritert", "sterk"],
+      "allergens": ["soy", "egg", "gluten"],
+      "allergen_notes": {
+        "no": "Inneholder soya, egg og gluten.",
+        "en": "Contains soy, egg and gluten."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 3
+    },
+    {
+      "id": "dish-045",
+      "dish_number": "45",
+      "name": {
+        "no": "Stekt and i strimler på Kinesisk-vis (sterk)",
+        "en": "Fried duck in Chinese style (spicy)"
+      },
+      "description": {
+        "no": "Stekte andestrimler med grønnsaker i en spesiell, sterk kinesisk saus.",
+        "en": "Stir-fried duck strips with vegetables in a special, spicy Chinese sauce."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-045.jpg",
+      "price": {
+        "takeaway": 240,
+        "dine_in": 270
+      },
+      "category": "And",
+      "ingredients": ["and", "grønnsaker", "soya", "hvetemel"],
+      "tags": ["and", "stekt", "kinesisk", "sterk"],
+      "allergens": ["soy", "gluten"],
+      "allergen_notes": {
+        "no": "Inneholder soya og gluten.",
+        "en": "Contains soy and gluten."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 3
+    },
+    // --- Lam / Lamb ---
+    {
+      "id": "dish-056",
+      "dish_number": "56",
+      "name": {
+        "no": "Lammefilet med ingefær og chilli saus (sterk)",
+        "en": "Lamb with ginger and chili sauce (spicy)"
+      },
+      "description": {
+        "no": "Mør lammefilet i en sterk og aromatisk saus av fersk ingefær og chili.",
+        "en": "Tender lamb fillet in a spicy and aromatic sauce of fresh ginger and chili."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-056.jpg",
+      "price": {
+        "takeaway": 240,
+        "dine_in": 269
+      },
+      "category": "Lam",
+      "ingredients": ["lammefilet", "ingefær", "chili", "soya", "hvetemel"],
+      "tags": ["lam", "ingefær", "sterk"],
+      "allergens": ["soy", "gluten"],
+      "allergen_notes": {
+        "no": "Inneholder soya og gluten.",
+        "en": "Contains soy and gluten."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 3
+    },
+    {
+      "id": "dish-057",
+      "dish_number": "57",
+      "name": {
+        "no": "Lammefilet på Kinesisk-vis (sterk)",
+        "en": "Lamb in Chinese style (spicy)"
+      },
+      "description": {
+        "no": "Lammefilet tilberedt i en spesiell og sterk saus etter husets kinesiske oppskrift.",
+        "en": "Lamb fillet prepared in a special and spicy sauce from the house's Chinese recipe."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-057.jpg",
+      "price": {
+        "takeaway": 240,
+        "dine_in": 269
+      },
+      "category": "Lam",
+      "ingredients": ["lammefilet", "krydder", "soya", "hvetemel"],
+      "tags": ["lam", "kinesisk", "sterk", "spesial"],
+      "allergens": ["soy", "gluten"],
+      "allergen_notes": {
+        "no": "Inneholder soya og gluten.",
+        "en": "Contains soy and gluten."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 3
+    },
+    {
+      "id": "dish-058",
+      "dish_number": "58",
+      "name": {
+        "no": "Lammefilet med hvitløk og chilli saus (sterk)",
+        "en": "Lamb with garlic and chili sauce (spicy)"
+      },
+      "description": {
+        "no": "Mør lammefilet i en sterk og smaksrik saus av hvitløk og chili.",
+        "en": "Tender lamb fillet in a spicy and flavorful garlic and chili sauce."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-058.jpg",
+      "price": {
+        "takeaway": 240,
+        "dine_in": 269
+      },
+      "category": "Lam",
+      "ingredients": ["lammefilet", "hvitløk", "chili", "soya"],
+      "tags": ["lam", "hvitløk", "sterk"],
+      "allergens": ["soy"],
+      "allergen_notes": {
+        "no": "Inneholder soya.",
+        "en": "Contains soy."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 3
+    },
+    // --- Oksekjøtt / Beef ---
+    {
+      "id": "dish-018",
+      "dish_number": "18",
+      "name": {
+        "no": "Biff Chop Suey",
+        "en": "Beef Chop Suey"
+      },
+      "description": {
+        "no": "En klassisk wokrett med møre biffstrimler og et utvalg av ferske grønnsaker.",
+        "en": "A classic wok dish with tender beef strips and a selection of fresh vegetables."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-018.jpg",
+      "price": {
+        "takeaway": 190,
+        "dine_in": 210
+      },
+      "category": "Oksekjøtt",
+      "ingredients": ["oksekjøtt", "grønnsaker", "soya"],
+      "tags": ["oksekjøtt", "biff", "chop suey", "klassiker"],
+      "allergens": ["soy"],
+      "allergen_notes": {
+        "no": "Inneholder soya.",
+        "en": "Contains soy."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 0
+    },
+    {
+      "id": "dish-109",
+      "dish_number": "109",
+      "name": {
+        "no": "Biff med cashewnøtter",
+        "en": "Beef with cashewnuts"
+      },
+      "description": {
+        "no": "Wok-stekt biff med grønnsaker og cashewnøtter i en smaksrik saus.",
+        "en": "Wok-fried beef with vegetables and cashew nuts in a flavorful sauce."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-109.jpg",
+      "price": {
+        "takeaway": 195,
+        "dine_in": 220
+      },
+      "category": "Oksekjøtt",
+      "ingredients": ["oksekjøtt", "cashewnøtter", "grønnsaker", "soya"],
+      "tags": ["oksekjøtt", "biff", "cashewnøtter", "wok"],
+      "allergens": ["soy", "cashews"],
+      "allergen_notes": {
+        "no": "Inneholder soya og cashewnøtter.",
+        "en": "Contains soy and cashews."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 0
+    },
+    {
+      "id": "dish-019",
+      "dish_number": "19",
+      "name": {
+        "no": "Oksekjøtt i skiver med brokkoli",
+        "en": "Beef with broccoli"
+      },
+      "description": {
+        "no": "Møre biffstrimler woket med fersk brokkoli i en lett østers- og soyasaus.",
+        "en": "Tender beef strips wok-fried with fresh broccoli in a light oyster and soy sauce."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-019.jpg",
+      "price": {
+        "takeaway": 195,
+        "dine_in": 220
+      },
+      "category": "Oksekjøtt",
+      "ingredients": ["oksekjøtt", "brokkoli", "soya"],
+      "tags": ["oksekjøtt", "biff", "brokkoli"],
+      "allergens": ["soy"],
+      "allergen_notes": {
+        "no": "Inneholder soya.",
+        "en": "Contains soy."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 0
+    },
+    {
+      "id": "dish-020",
+      "dish_number": "20",
+      "name": {
+        "no": "Oksekjøtt i skiver med regnbuegrønnsaker (sterk)",
+        "en": "Rainbow beef (spicy)"
+      },
+      "description": {
+        "no": "En fargerik og sterk rett med biffstrimler og et bredt utvalg av grønnsaker.",
+        "en": "A colorful and spicy dish with beef strips and a wide variety of vegetables."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-020.jpg",
+      "price": {
+        "takeaway": 195,
+        "dine_in": 220
+      },
+      "category": "Oksekjøtt",
+      "ingredients": ["oksekjøtt", "grønnsaker", "chili", "soya", "hvetemel"],
+      "tags": ["oksekjøtt", "biff", "sterk"],
+      "allergens": ["soy", "gluten"],
+      "allergen_notes": {
+        "no": "Inneholder soya og gluten.",
+        "en": "Contains soy and gluten."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 3
+    },
+    {
+      "id": "dish-021",
+      "dish_number": "21",
+      "name": {
+        "no": "Oksekjøtt med Sze Chuen saus (sterk)",
+        "en": "Beef with Sze Chuen sauce (spicy)"
+      },
+      "description": {
+        "no": "En autentisk og sterk rett fra Szechuan-kjøkkenet med oksekjøtt og grønnsaker.",
+        "en": "An authentic and spicy dish from Szechuan cuisine with beef and vegetables."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-021.jpg",
+      "price": {
+        "takeaway": 195,
+        "dine_in": 220
+      },
+      "category": "Oksekjøtt",
+      "ingredients": ["oksekjøtt", "szechuanpepper", "chili", "grønnsaker"],
+      "tags": ["oksekjøtt", "biff", "szechuan", "sterk"],
+      "allergens": [],
+      "allergen_notes": {
+        "no": "",
+        "en": ""
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 5
+    },
+    {
+      "id": "dish-022",
+      "dish_number": "22",
+      "name": {
+        "no": "Oksekjøtt med Gon Bao saus (sterk)",
+        "en": "Beef with Gon Bao sauce (spicy)"
+      },
+      "description": {
+        "no": "En Szechuan-klassiker med oksekjøtt, peanøtter, chili og grønnsaker.",
+        "en": "A Szechuan classic with beef, peanuts, chili, and vegetables."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-022.jpg",
+      "price": {
+        "takeaway": 195,
+        "dine_in": 220
+      },
+      "category": "Oksekjøtt",
+      "ingredients": ["oksekjøtt", "peanøtter", "chili", "soya", "hvetemel"],
+      "tags": ["oksekjøtt", "biff", "gon bao", "szechuan", "sterk"],
+      "allergens": ["soy", "peanuts", "gluten"],
+      "allergen_notes": {
+        "no": "Inneholder soya, peanøtter og gluten.",
+        "en": "Contains soy, peanuts and gluten."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 4
+    },
+    {
+      "id": "dish-023",
+      "dish_number": "23",
+      "name": {
+        "no": "Oksekjøtt i skiver med ananas",
+        "en": "Beef with pineapple"
+      },
+      "description": {
+        "no": "En mild rett med biffstrimler og søte ananasbiter.",
+        "en": "A mild dish with beef strips and sweet pineapple chunks."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-023.jpg",
+      "price": {
+        "takeaway": 190,
+        "dine_in": 210
+      },
+      "category": "Oksekjøtt",
+      "ingredients": ["oksekjøtt", "ananas"],
+      "tags": ["oksekjøtt", "biff", "ananas"],
+      "allergens": [],
+      "allergen_notes": {
+        "no": "",
+        "en": ""
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 0
+    },
+    {
+      "id": "dish-024",
+      "dish_number": "24",
+      "name": {
+        "no": "Oksekjøtt i skiver med karrisaus",
+        "en": "Beef with curry sauce"
+      },
+      "description": {
+        "no": "En mild og kremet karrirett med mørt oksekjøtt og kokosmelk.",
+        "en": "A mild and creamy curry dish with tender beef and coconut milk."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-024.jpg",
+      "price": {
+        "takeaway": 190,
+        "dine_in": 210
+      },
+      "category": "Oksekjøtt",
+      "ingredients": ["oksekjøtt", "karri", "kokosmelk", "grønnsaker"],
+      "tags": ["oksekjøtt", "biff", "karri"],
+      "allergens": ["coconut-milk"],
+      "allergen_notes": {
+        "no": "Inneholder kokosmelk.",
+        "en": "Contains coconut milk."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 2
+    },
+    {
+      "id": "dish-025",
+      "dish_number": "25",
+      "name": {
+        "no": "Kinesisk pepper biff",
+        "en": "Chinese pepper beef"
+      },
+      "description": {
+        "no": "En populær rett med mør biff i en rik og kraftig peppersaus.",
+        "en": "A popular dish with tender beef in a rich and strong pepper sauce."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-025.jpg",
+      "price": {
+        "takeaway": 220,
+        "dine_in": 240
+      },
+      "category": "Oksekjøtt",
+      "ingredients": ["oksekjøtt", "pepper", "soya", "egg", "hvetemel"],
+      "tags": ["oksekjøtt", "biff", "pepper"],
+      "allergens": ["soy", "egg", "gluten"],
+      "allergen_notes": {
+        "no": "Inneholder soya, egg og gluten.",
+        "en": "Contains soy, egg and gluten."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 2
+    },
+    {
+      "id": "dish-026",
+      "dish_number": "26",
+      "name": {
+        "no": "Oksekjøtt i skiver med hvitløk og chilli saus(Sterk)",
+        "en": "Beef with garlic and chilli sauce (spicy)"
+      },
+      "description": {
+        "no": "Møre biffstrimler i en sterk og smaksrik saus av hvitløk og chili.",
+        "en": "Tender beef strips in a spicy and flavorful garlic and chili sauce."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-026.jpg",
+      "price": {
+        "takeaway": 195,
+        "dine_in": 220
+      },
+      "category": "Oksekjøtt",
+      "ingredients": ["oksekjøtt", "hvitløk", "chili", "soya"],
+      "tags": ["oksekjøtt", "biff", "hvitløk", "sterk"],
+      "allergens": ["soy"],
+      "allergen_notes": {
+        "no": "Inneholder soya.",
+        "en": "Contains soy."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 3
+    },
+    {
+      "id": "dish-027",
+      "dish_number": "27",
+      "name": {
+        "no": "Oksekjøtt i skiver med rød karri og kokos saus (sterk)",
+        "en": "Beef with red curry and coconut sauce (spicy)"
+      },
+      "description": {
+        "no": "En sterk og smaksrik thailandsk rød karri med oksekjøtt, grønnsaker og kokosmelk.",
+        "en": "A spicy and flavorful Thai red curry with beef, vegetables, and coconut milk."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-027.jpg",
+      "price": {
+        "takeaway": 195,
+        "dine_in": 220
+      },
+      "category": "Oksekjøtt",
+      "ingredients": ["oksekjøtt", "rød karri", "kokosmelk", "bambusskudd"],
+      "tags": ["oksekjøtt", "biff", "karri", "thai", "sterk"],
+      "allergens": ["coconut-milk"],
+      "allergen_notes": {
+        "no": "Inneholder kokosmelk.",
+        "en": "Contains coconut milk."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 4
+    },
+    {
+      "id": "dish-028",
+      "dish_number": "28",
+      "name": {
+        "no": "Oksekjøtt i skiver med sorte bønner saus (sterk)",
+        "en": "Beef with black beans sauce (spicy)"
+      },
+      "description": {
+        "no": "En salt og smaksrik rett med biffstrimler i en saus av fermenterte sorte bønner.",
+        "en": "A savory and flavorful dish with beef strips in a fermented black bean sauce."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-028.jpg",
+      "price": {
+        "takeaway": 190,
+        "dine_in": 210
+      },
+      "category": "Oksekjøtt",
+      "ingredients": ["oksekjøtt", "sorte bønner", "soya"],
+      "tags": ["oksekjøtt", "biff", "sorte bønner", "sterk"],
+      "allergens": ["soy"],
+      "allergen_notes": {
+        "no": "Inneholder soya.",
+        "en": "Contains soy."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 3
+    },
+    {
+      "id": "dish-029",
+      "dish_number": "29",
+      "name": {
+        "no": "Oksekjøtt med Satay saus på spyd",
+        "en": "Beef with Satay sauce"
+      },
+      "description": {
+        "no": "Grillede biffspyd servert med en rik og kremet peanøttbasert sataysaus.",
+        "en": "Grilled beef skewers served with a rich and creamy peanut-based satay sauce."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-029.jpg",
+      "price": {
+        "takeaway": 195,
+        "dine_in": 220
+      },
+      "category": "Oksekjøtt",
+      "ingredients": ["oksekjøtt", "peanøtter", "egg", "hvetemel"],
+      "tags": ["oksekjøtt", "biff", "satay", "spyd"],
+      "allergens": ["egg", "peanuts", "gluten"],
+      "allergen_notes": {
+        "no": "Inneholder egg, peanøtter og gluten.",
+        "en": "Contains egg, peanuts and gluten."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 1
+    },
+    {
+      "id": "dish-030",
+      "dish_number": "30",
+      "name": {
+        "no": "Oksekjøtt på Kinesisk-vis (sterk)",
+        "en": "Beef in Chinese style (spicy)"
+      },
+      "description": {
+        "no": "En spesiell og sterk husets rett med oksekjøtt og utvalgte kinesiske krydder.",
+        "en": "A special and spicy house dish with beef and selected Chinese spices."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-030.jpg",
+      "price": {
+        "takeaway": 195,
+        "dine_in": 220
+      },
+      "category": "Oksekjøtt",
+      "ingredients": ["oksekjøtt", "krydder", "soya", "hvetemel"],
+      "tags": ["oksekjøtt", "biff", "kinesisk", "sterk", "spesial"],
+      "allergens": ["soy", "gluten"],
+      "allergen_notes": {
+        "no": "Inneholder soya og gluten.",
+        "en": "Contains soy and gluten."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 3
+    },
+    {
+      "id": "dish-301",
+      "dish_number": "301",
+      "name": {
+        "no": "Oksekjøtt med ingefær og chilli saus (sterk)",
+        "en": "Beef with ginger and chilli (spicy)"
+      },
+      "description": {
+        "no": "Mørt oksekjøtt i en sterk og aromatisk saus av fersk ingefær og chili.",
+        "en": "Tender beef in a spicy and aromatic sauce of fresh ginger and chili."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-301.jpg",
+      "price": {
+        "takeaway": 195,
+        "dine_in": 220
+      },
+      "category": "Oksekjøtt",
+      "ingredients": ["oksekjøtt", "ingefær", "chili", "soya", "hvetemel"],
+      "tags": ["oksekjøtt", "biff", "ingefær", "sterk"],
+      "allergens": ["soy", "gluten"],
+      "allergen_notes": {
+        "no": "Inneholder soya og gluten.",
+        "en": "Contains soy and gluten."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 3
+    },
+    // --- Kongereker / King Prawns ---
+    {
+      "id": "dish-046",
+      "dish_number": "46",
+      "name": {
+        "no": "Stekte kongereker på Kinesisk-vis (sterk)",
+        "en": "King prawns in Chinese style (spicy)"
+      },
+      "description": {
+        "no": "Stekte kongereker i en spesiell og sterk saus etter husets kinesiske oppskrift.",
+        "en": "Stir-fried king prawns in a special and spicy sauce from the house's Chinese recipe."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-046.jpg",
       "price": {
         "takeaway": 230,
         "dine_in": 269
       },
-      "category": "Main Course",
-      "ingredients": ["king prawns", "chili", "soy sauce", "vegetables"],
-      "tags": ["spicy", "seafood", "chinese", "main course"],
-      "allergens": {
-        "gluten": true,
-        "milk": false,
-        "egg": false,
-        "nuts": false,
-        "soy": false,
-        "fish": false,
-        "shellfish": false,
-        "crustaceans": true,
-        "mustard": false,
-        "sesame": false,
-        "celery": false,
-        "sulfites": false,
-        "lupin": false
-      },
+      "category": "Kongereker",
+      "ingredients": ["kongereker", "krydder", "soya", "grønnsaker"],
+      "tags": ["kongereker", "sjømat", "kinesisk", "sterk"],
+      "allergens": ["soy", "crustaceans"],
       "allergen_notes": {
-        "no": "Inneholder gluten og skalldyr.",
-        "en": "Contains gluten and crustaceans."
+        "no": "Inneholder soya og skalldyr.",
+        "en": "Contains soy and crustaceans."
       },
+      "dietary": [],
       "available": true,
-      "spice_level": "hot"
+      "spice_level": 3
     },
     {
       "id": "dish-047",
+      "dish_number": "47",
       "name": {
-        "no": "Kongereker med Gon Bao saus",
-        "en": "King prawns with Gon Bao sauce"
+        "no": "Kongereker med Gon Bao saus (sterk)",
+        "en": "King prawns with Gon Bao sauce (spicy)"
       },
       "description": {
-        "no": "Sterk rett med kongereker i Gon Bao saus.",
-        "en": "Spicy dish with king prawns in Gon Bao sauce."
+        "no": "En Szechuan-klassiker med kongereker, peanøtter, chili og grønnsaker.",
+        "en": "A Szechuan classic with king prawns, peanuts, chili, and vegetables."
       },
+      "image_url": "https://your-restaurant.com/img/menu/dish-047.jpg",
       "price": {
         "takeaway": 230,
         "dine_in": 269
       },
-      "category": "Main Course",
-      "ingredients": ["king prawns", "Gon Bao sauce", "chili", "peanuts"],
-      "tags": ["spicy", "seafood", "asian", "main course"],
-      "allergens": {
-        "gluten": true,
-        "milk": false,
-        "egg": false,
-        "nuts": true,
-        "soy": false,
-        "fish": false,
-        "shellfish": true,
-        "crustaceans": true,
-        "mustard": false,
-        "sesame": false,
-        "celery": false,
-        "sulfites": false,
-        "lupin": false
-      },
+      "category": "Kongereker",
+      "ingredients": ["kongereker", "peanøtter", "chili", "soya"],
+      "tags": ["kongereker", "sjømat", "gon bao", "szechuan", "sterk"],
+      "allergens": ["soy", "peanuts", "crustaceans"],
       "allergen_notes": {
-        "no": "Inneholder gluten, nøtter og skalldyr.",
-        "en": "Contains gluten, nuts, and crustaceans."
+        "no": "Inneholder soya, peanøtter og skalldyr.",
+        "en": "Contains soy, peanuts and crustaceans."
       },
+      "dietary": [],
       "available": true,
-      "spice_level": "hot"
+      "spice_level": 4
     },
     {
       "id": "dish-048",
+      "dish_number": "48",
       "name": {
-        "no": "Kongereker med ingefær og chili",
-        "en": "King prawns with ginger and chili"
+        "no": "Kongereker med ingefær og chilli (sterk)",
+        "en": "King prawns with ginger and chili (spicy)"
       },
       "description": {
-        "no": "Sterk rett med kongereker, ingefær og chili.",
-        "en": "Spicy king prawns with ginger and chili."
+        "no": "Kongereker i en sterk og aromatisk saus av fersk ingefær og chili.",
+        "en": "King prawns in a spicy and aromatic sauce of fresh ginger and chili."
       },
+      "image_url": "https://your-restaurant.com/img/menu/dish-048.jpg",
       "price": {
         "takeaway": 230,
         "dine_in": 269
       },
-      "category": "Main Course",
-      "ingredients": ["king prawns", "ginger", "chili", "soy sauce"],
-      "tags": ["spicy", "seafood", "asian", "main course"],
-      "allergens": {
-        "gluten": true,
-        "milk": false,
-        "egg": false,
-        "nuts": false,
-        "soy": true,
-        "fish": false,
-        "shellfish": false,
-        "crustaceans": true,
-        "mustard": false,
-        "sesame": false,
-        "celery": false,
-        "sulfites": false,
-        "lupin": false
-      },
+      "category": "Kongereker",
+      "ingredients": ["kongereker", "ingefær", "chili", "soya", "hvetemel"],
+      "tags": ["kongereker", "sjømat", "ingefær", "sterk"],
+      "allergens": ["soy", "gluten", "crustaceans"],
       "allergen_notes": {
-        "no": "Inneholder gluten, soya og skalldyr.",
-        "en": "Contains gluten, soy, and crustaceans."
+        "no": "Inneholder soya, gluten og skalldyr.",
+        "en": "Contains soy, gluten and crustaceans."
       },
+      "dietary": [],
       "available": true,
-      "spice_level": "hot"
+      "spice_level": 3
+    },
+    {
+      "id": "dish-049",
+      "dish_number": "49",
+      "name": {
+        "no": "Kongereker med rød karri og kokos saus (sterk)",
+        "en": "King prawns with red curry and coconut sauce (spicy)"
+      },
+      "description": {
+        "no": "En sterk og smaksrik thailandsk rød karri med kongereker og kokosmelk.",
+        "en": "A spicy and flavorful Thai red curry with king prawns and coconut milk."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-049.jpg",
+      "price": {
+        "takeaway": 230,
+        "dine_in": 269
+      },
+      "category": "Kongereker",
+      "ingredients": ["kongereker", "rød karri", "kokosmelk", "soya"],
+      "tags": ["kongereker", "sjømat", "karri", "thai", "sterk"],
+      "allergens": ["soy", "coconut-milk", "crustaceans"],
+      "allergen_notes": {
+        "no": "Inneholder soya, kokosmelk og skalldyr.",
+        "en": "Contains soy, coconut milk and crustaceans."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 4
+    },
+    {
+      "id": "dish-050",
+      "dish_number": "50",
+      "name": {
+        "no": "Kongereker med hvitløk og chilli saus (sterk)",
+        "en": "King prawns with garlic and chilli sauce (spicy)"
+      },
+      "description": {
+        "no": "Stekte kongereker i en sterk og smaksrik saus av hvitløk og chili.",
+        "en": "Stir-fried king prawns in a spicy and flavorful garlic and chili sauce."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-050.jpg",
+      "price": {
+        "takeaway": 230,
+        "dine_in": 269
+      },
+      "category": "Kongereker",
+      "ingredients": ["kongereker", "hvitløk", "chili"],
+      "tags": ["kongereker", "sjømat", "hvitløk", "sterk"],
+      "allergens": ["crustaceans"],
+      "allergen_notes": {
+        "no": "Inneholder skalldyr.",
+        "en": "Contains crustaceans."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 3
+    },
+    {
+      "id": "dish-051",
+      "dish_number": "51",
+      "name": {
+        "no": "Kongereker med grønnsaker",
+        "en": "King prawns chop suey"
+      },
+      "description": {
+        "no": "En klassisk Chop Suey med kongereker og et utvalg av ferske grønnsaker.",
+        "en": "A classic Chop Suey with king prawns and a selection of fresh vegetables."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-051.jpg",
+      "price": {
+        "takeaway": 230,
+        "dine_in": 269
+      },
+      "category": "Kongereker",
+      "ingredients": ["kongereker", "grønnsaker", "soya"],
+      "tags": ["kongereker", "sjømat", "chop suey"],
+      "allergens": ["soy", "crustaceans"],
+      "allergen_notes": {
+        "no": "Inneholder soya og skalldyr.",
+        "en": "Contains soy and crustaceans."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 0
+    },
+    {
+      "id": "dish-052",
+      "dish_number": "52",
+      "name": {
+        "no": "Friterte kongereker med søt-sur saus",
+        "en": "Fried king prawns with sweet and sour sauce"
+      },
+      "description": {
+        "no": "Sprø, friterte kongereker servert med en klassisk sursøt saus.",
+        "en": "Crispy, fried king prawns served with a classic sweet and sour sauce."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-052.jpg",
+      "price": {
+        "takeaway": 240,
+        "dine_in": 279
+      },
+      "category": "Kongereker",
+      "ingredients": ["kongereker", "hvetemel", "egg", "ananas", "paprika"],
+      "tags": ["kongereker", "sjømat", "fritert", "sursøt"],
+      "allergens": ["gluten", "crustaceans", "egg"],
+      "allergen_notes": {
+        "no": "Inneholder gluten, skalldyr og egg.",
+        "en": "Contains gluten, crustaceans and egg."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 0
+    },
+    {
+      "id": "dish-503",
+      "dish_number": "503",
+      "name": {
+        "no": "Kongereker med Satay saus",
+        "en": "King prawns with Satay sauce"
+      },
+      "description": {
+        "no": "Kongereker servert med en rik og kremet peanøttbasert sataysaus.",
+        "en": "King prawns served with a rich and creamy peanut-based satay sauce."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-503.jpg",
+      "price": {
+        "takeaway": 230,
+        "dine_in": 269
+      },
+      "category": "Kongereker",
+      "ingredients": ["kongereker", "peanøtter", "cashewnøtter", "hvetemel"],
+      "tags": ["kongereker", "sjømat", "satay"],
+      "allergens": ["cashews", "peanuts", "gluten", "crustaceans"],
+      "allergen_notes": {
+        "no": "Inneholder cashewnøtter, peanøtter, gluten og skalldyr.",
+        "en": "Contains cashews, peanuts, gluten and crustaceans."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 1
+    },
+    // --- Svinekjøtt / Pork ---
+    {
+      "id": "dish-031",
+      "dish_number": "31",
+      "name": {
+        "no": "Svinekjøtt i skiver med grønnsaker",
+        "en": "Pork Chop Suey"
+      },
+      "description": {
+        "no": "En klassisk Chop Suey med møre svinekjøttstrimler og et utvalg av ferske grønnsaker.",
+        "en": "A classic Chop Suey with tender pork strips and a selection of fresh vegetables."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-031.jpg",
+      "price": {
+        "takeaway": 190,
+        "dine_in": 210
+      },
+      "category": "Svinekjøtt",
+      "ingredients": ["svinekjøtt", "grønnsaker", "soya"],
+      "tags": ["svin", "chop suey", "klassiker"],
+      "allergens": ["soy"],
+      "allergen_notes": {
+        "no": "Inneholder soya.",
+        "en": "Contains soy."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 0
+    },
+    {
+      "id": "dish-032",
+      "dish_number": "32",
+      "name": {
+        "no": "Svinekjøtt i skiver med ingefær og chilli saus (sterk)",
+        "en": "Pork with ginger and chilli sauce (spicy)"
+      },
+      "description": {
+        "no": "Svinekjøtt i skiver med en aromatisk og sterk saus av ingefær og chili.",
+        "en": "Sliced pork with an aromatic and spicy ginger and chili sauce."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-032.jpg",
+      "price": {
+        "takeaway": 195,
+        "dine_in": 220
+      },
+      "category": "Svinekjøtt",
+      "ingredients": ["svinekjøtt", "ingefær", "chili", "soya", "hvetemel"],
+      "tags": ["svin", "sterk", "ingefær"],
+      "allergens": ["soy", "gluten"],
+      "allergen_notes": {
+        "no": "Inneholder soya og gluten.",
+        "en": "Contains soy and gluten."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 3
+    },
+    {
+      "id": "dish-302",
+      "dish_number": "302",
+      "name": {
+        "no": "Fritert svinekjøtt med Satay saus",
+        "en": "Pork with Satay sauce"
+      },
+      "description": {
+        "no": "Sprøstekt, fritert svinekjøtt servert med en rik og kremet peanøttbasert sataysaus.",
+        "en": "Crispy, deep-fried pork served with a rich and creamy peanut-based satay sauce."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-302.jpg",
+      "price": {
+        "takeaway": 195,
+        "dine_in": 220
+      },
+      "category": "Svinekjøtt",
+      "ingredients": ["svinekjøtt", "peanøtter", "egg", "hvetemel"],
+      "tags": ["svin", "fritert", "satay"],
+      "allergens": ["egg", "peanuts", "gluten"],
+      "allergen_notes": {
+        "no": "Inneholder egg, peanøtter og gluten.",
+        "en": "Contains egg, peanuts and gluten."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 1
+    },
+    {
+      "id": "dish-033",
+      "dish_number": "33",
+      "name": {
+        "no": "Fritert svinekjøtt med søt-sur saus",
+        "en": "Sweet and sour pork"
+      },
+      "description": {
+        "no": "En svært populær rett med sprø, fritert svinekjøtt i en klassisk sursøt saus.",
+        "en": "A very popular dish with crispy, deep-fried pork in a classic sweet and sour sauce."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-033.jpg",
+      "price": {
+        "takeaway": 190,
+        "dine_in": 210
+      },
+      "category": "Svinekjøtt",
+      "ingredients": ["svinekjøtt", "ananas", "paprika", "hvetemel", "egg"],
+      "tags": ["svin", "fritert", "sursøt", "populær"],
+      "allergens": ["egg", "gluten"],
+      "allergen_notes": {
+        "no": "Inneholder egg og gluten.",
+        "en": "Contains egg and gluten."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 0
+    },
+    {
+      "id": "dish-034",
+      "dish_number": "34",
+      "name": {
+        "no": "Fritert svinekjøtt med pepper saus",
+        "en": "Deep fried pork with pepper sauce"
+      },
+      "description": {
+        "no": "Sprø, fritert svinekjøtt servert med en kraftig og aromatisk peppersaus.",
+        "en": "Crispy, deep-fried pork served with a rich and aromatic pepper sauce."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-034.jpg",
+      "price": {
+        "takeaway": 190,
+        "dine_in": 210
+      },
+      "category": "Svinekjøtt",
+      "ingredients": ["svinekjøtt", "pepper", "soya", "egg", "hvetemel"],
+      "tags": ["svin", "fritert", "pepper"],
+      "allergens": ["soy", "egg", "gluten"],
+      "allergen_notes": {
+        "no": "Inneholder soya, egg og gluten.",
+        "en": "Contains soy, egg and gluten."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 2
+    },
+    {
+      "id": "dish-303",
+      "dish_number": "303",
+      "name": {
+        "no": "Fritert svinekjøtt med hvitløk og chilli (sterk)",
+        "en": "Deep fried pork with garlic and chilli (spicy)"
+      },
+      "description": {
+        "no": "Sprøstekt svinekjøtt vendt i en sterk og smaksrik saus av hvitløk og chili.",
+        "en": "Crispy fried pork tossed in a spicy and flavorful garlic and chili sauce."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-303.jpg",
+      "price": {
+        "takeaway": 195,
+        "dine_in": 220
+      },
+      "category": "Svinekjøtt",
+      "ingredients": ["svinekjøtt", "hvitløk", "chili", "soya", "egg", "hvetemel", "peanøtter"],
+      "tags": ["svin", "fritert", "hvitløk", "sterk"],
+      "allergens": ["soy", "egg", "peanuts", "gluten"],
+      "allergen_notes": {
+        "no": "Inneholder soya, egg, peanøtter og gluten.",
+        "en": "Contains soy, egg, peanuts and gluten."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 3
+    },
+    {
+      "id": "dish-304",
+      "dish_number": "304",
+      "name": {
+        "no": "Svineribber med B.B.Q. Saus",
+        "en": "Spare-ribs with B. B. Q. sauce"
+      },
+      "description": {
+        "no": "Møre, grillede svineribber glasert med en klassisk, røkt BBQ-saus.",
+        "en": "Tender, grilled spare-ribs glazed with a classic, smoky BBQ sauce."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-304.jpg",
+      "price": {
+        "takeaway": 230,
+        "dine_in": 259
+      },
+      "category": "Svinekjøtt",
+      "ingredients": ["svineribbe", "bbq-saus", "egg", "hvetemel"],
+      "tags": ["svin", "ribbe", "bbq"],
+      "allergens": ["egg", "gluten"],
+      "allergen_notes": {
+        "no": "Inneholder egg og gluten.",
+        "en": "Contains egg and gluten."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 0
+    },
+    {
+      "id": "dish-305",
+      "dish_number": "305",
+      "name": {
+        "no": "Stekt svineribber på Kinesisk-vis (sterk)",
+        "en": "Spare-ribs in Chinese style (spicy)"
+      },
+      "description": {
+        "no": "Stekte svineribber i en spesiell og sterk saus etter husets kinesiske oppskrift.",
+        "en": "Fried spare-ribs in a special and spicy sauce from the house's Chinese recipe."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-305.jpg",
+      "price": {
+        "takeaway": 220,
+        "dine_in": 249
+      },
+      "category": "Svinekjøtt",
+      "ingredients": ["svineribbe", "krydder", "soya", "egg", "hvetemel"],
+      "tags": ["svin", "ribbe", "kinesisk", "sterk"],
+      "allergens": ["soy", "egg", "gluten"],
+      "allergen_notes": {
+        "no": "Inneholder soya, egg og gluten.",
+        "en": "Contains soy, egg and gluten."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 3
+    },
+    // --- Andre Retter ---
+    {
+      "id": "dish-405",
+      "dish_number": "405",
+      "name": {
+        "no": "Hamburger m/Pommes Frites (Hjemmelaget)",
+        "en": "Burger & Fries (Homemade)"
+      },
+      "description": {
+        "no": "Hjemmelaget hamburger servert i brød med salat, dressing og en porsjon pommes frites.",
+        "en": "Homemade hamburger served in a bun with salad, dressing, and a portion of fries."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-405.jpg",
+      "price": {
+        "takeaway": 230,
+        "dine_in": 269
+      },
+      "category": "Andre Retter",
+      "ingredients": ["hamburger", "brød", "pommes frites", "salat", "dressing"],
+      "tags": ["burger", "hjemmelaget", "vestlig"],
+      "allergens": ["gluten", "sesame"],
+      "allergen_notes": {
+        "no": "Inneholder gluten (hamburgerbrød). Kan inneholde sesam.",
+        "en": "Contains gluten (burger bun). May contain sesame."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 0
+    },
+    {
+      "id": "dish-406",
+      "dish_number": "406",
+      "name": {
+        "no": "Pommes Frites",
+        "en": "Fries"
+      },
+      "description": {
+        "no": "En porsjon med sprø, gylne pommes frites.",
+        "en": "A portion of crispy, golden french fries."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-406.jpg",
+      "price": {
+        "takeaway": 230,
+        "dine_in": 269
+      },
+      "category": "Andre Retter",
+      "ingredients": ["potet", "olje", "salt"],
+      "tags": ["pommes frites", "fries", "tilbehør", "vestlig"],
+      "allergens": [],
+      "allergen_notes": {
+        "no": "",
+        "en": ""
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 0
+    },
+    {
+      "id": "dish-407",
+      "dish_number": "407",
+      "name": {
+        "no": "Pølse m/Pommes Frites",
+        "en": "Sausage & Fries"
+      },
+      "description": {
+        "no": "En klassisk grillpølse servert med en porsjon pommes frites.",
+        "en": "A classic grilled sausage served with a portion of fries."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-407.jpg",
+      "price": {
+        "takeaway": 230,
+        "dine_in": 269
+      },
+      "category": "Andre Retter",
+      "ingredients": ["pølse", "pommes frites"],
+      "tags": ["pølse", "pommes frites", "vestlig"],
+      "allergens": [],
+      "allergen_notes": {
+        "no": "",
+        "en": ""
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 0
+    },
+    {
+      "id": "dish-408",
+      "dish_number": "408",
+      "name": {
+        "no": "1/2 Kylling m/Pommes Frites og salat",
+        "en": "1/2 Chicken with Fries and green salad"
+      },
+      "description": {
+        "no": "En halv grillet kylling servert med pommes frites og en frisk salat.",
+        "en": "Half a grilled chicken served with fries and a fresh salad."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-408.jpg",
+      "price": {
+        "takeaway": 230,
+        "dine_in": 269
+      },
+      "category": "Andre Retter",
+      "ingredients": ["kylling", "pommes frites", "salat"],
+      "tags": ["kylling", "grillet", "vestlig"],
+      "allergens": [],
+      "allergen_notes": {
+        "no": "",
+        "en": ""
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 0
+    },
+    {
+      "id": "dish-409",
+      "dish_number": "409",
+      "name": {
+        "no": "Biffsnadder m/Pommes Frites, salat og bearnaise saus",
+        "en": "Beefmix with Fries, green salad and sauce"
+      },
+      "description": {
+        "no": "En klassisk biffsnadder med stekte biffstrimler og løk, servert med pommes frites, salat og bearnaisesaus.",
+        "en": "A classic 'biffsnadder' with fried beef strips and onion, served with fries, salad, and bearnaise sauce."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-409.jpg",
+      "price": {
+        "takeaway": 230,
+        "dine_in": 269
+      },
+      "category": "Andre Retter",
+      "ingredients": ["biffstrimler", "løk", "pommes frites", "salat", "bearnaisesaus"],
+      "tags": ["biffsnadder", "biff", "vestlig"],
+      "allergens": ["egg", "gluten", "milk"],
+      "allergen_notes": {
+        "no": "Inneholder egg og melk (bearnaisesaus), gluten (pommes frites kan inneholde).",
+        "en": "Contains egg and milk (bearnaise sauce), gluten (fries may contain)."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 0
+    },
+    {
+      "id": "dish-500",
+      "dish_number": "500",
+      "name": {
+        "no": "Pommes Frites med ost",
+        "en": "Fries with cheese"
+      },
+      "description": {
+        "no": "En porsjon med sprø pommes frites toppet med smeltet ost.",
+        "en": "A portion of crispy fries topped with melted cheese."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-500.jpg",
+      "price": {
+        "takeaway": 230,
+        "dine_in": 269
+      },
+      "category": "Andre Retter",
+      "ingredients": ["potet", "ost", "olje", "salt"],
+      "tags": ["pommes frites", "ost", "vestlig"],
+      "allergens": ["milk"],
+      "allergen_notes": {
+        "no": "Inneholder melk (ost).",
+        "en": "Contains milk (cheese)."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 0
+    },
+    {
+      "id": "dish-501",
+      "dish_number": "501",
+      "name": {
+        "no": "Kylling Nuggets med Pommes Frites",
+        "en": "Chicken nuggets with Fries"
+      },
+      "description": {
+        "no": "Sprø kyllingnuggets servert med en porsjon pommes frites.",
+        "en": "Crispy chicken nuggets served with a portion of fries."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-501.jpg",
+      "price": {
+        "takeaway": 230,
+        "dine_in": 269
+      },
+      "category": "Andre Retter",
+      "ingredients": ["kyllingnuggets", "pommes frites", "hvetemel", "egg"],
+      "tags": ["nuggets", "kylling", "vestlig"],
+      "allergens": ["egg", "gluten"],
+      "allergen_notes": {
+        "no": "Inneholder egg og gluten.",
+        "en": "Contains egg and gluten."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 0
+    },
+    // --- Dessert ---
+    {
+      "id": "dish-D01",
+      "dish_number": "D1",
+      "name": {
+        "no": "Stekt banan med is",
+        "en": "Fried Banana with ice cream"
+      },
+      "description": {
+        "no": "Varm, fritert banan servert med en kule vaniljeis og sjokoladesaus.",
+        "en": "Warm, fried banana served with a scoop of vanilla ice cream and chocolate sauce."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-D01.jpg",
+      "price": {
+        "dine_in": 110
+      },
+      "category": "Dessert",
+      "ingredients": ["banan", "is", "hvetemel", "egg"],
+      "tags": ["dessert", "is", "frukt", "klassiker"],
+      "allergens": ["milk", "gluten", "egg"],
+      "allergen_notes": {
+        "no": "Inneholder melk (is), gluten og egg (frityrdeig).",
+        "en": "Contains milk (ice cream), gluten and egg (batter)."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 0
+    },
+    // --- Lunsj ---
+    {
+      "id": "dish-L1",
+      "dish_number": "L1",
+      "name": {
+        "no": "Kylling i skiver med grønnsaker",
+        "en": "Chicken Chop Suey (Lunch)"
+      },
+      "description": {
+        "no": "Lunsjporsjon. En klassisk Chop Suey med møre kyllingstrimler og et utvalg av ferske grønnsaker.",
+        "en": "Lunch portion. A classic Chop Suey with tender chicken strips and a selection of fresh vegetables."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-808.jpg",
+      "price": {
+        "takeaway": 140,
+        "dine_in": 160
+      },
+      "category": "Lunsj",
+      "ingredients": ["kylling", "grønnsaker", "soya"],
+      "tags": ["lunsj", "kylling", "chop suey"],
+      "allergens": ["soy"],
+      "allergen_notes": {
+        "no": "Inneholder soya.",
+        "en": "Contains soy."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 0
+    },
+    {
+      "id": "dish-L2",
+      "dish_number": "L2",
+      "name": {
+        "no": "Oksekjøtt i skiver med grønnsaker",
+        "en": "Beef Chop Suey (Lunch)"
+      },
+      "description": {
+        "no": "Lunsjporsjon. En klassisk wokrett med møre biffstrimler og et utvalg av ferske grønnsaker.",
+        "en": "Lunch portion. A classic wok dish with tender beef strips and a selection of fresh vegetables."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-018.jpg",
+      "price": {
+        "takeaway": 140,
+        "dine_in": 160
+      },
+      "category": "Lunsj",
+      "ingredients": ["oksekjøtt", "grønnsaker", "soya"],
+      "tags": ["lunsj", "oksekjøtt", "chop suey"],
+      "allergens": ["soy"],
+      "allergen_notes": {
+        "no": "Inneholder soya.",
+        "en": "Contains soy."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 0
+    },
+    {
+      "id": "dish-L3",
+      "dish_number": "L3",
+      "name": {
+        "no": "Fritert kylling med søt-sur saus",
+        "en": "Sweet and sour chicken (Lunch)"
+      },
+      "description": {
+        "no": "Lunsjporsjon. Sprø, fritert kylling servert med en klassisk sursøt saus.",
+        "en": "Lunch portion. Crispy, deep-fried chicken served with a classic sweet and sour sauce."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-009.jpg",
+      "price": {
+        "takeaway": 140,
+        "dine_in": 160
+      },
+      "category": "Lunsj",
+      "ingredients": ["kylling", "ananas", "hvetemel", "egg"],
+      "tags": ["lunsj", "kylling", "fritert", "sursøt"],
+      "allergens": ["egg", "gluten"],
+      "allergen_notes": {
+        "no": "Inneholder egg og gluten.",
+        "en": "Contains egg and gluten."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 0
+    },
+    {
+      "id": "dish-L4",
+      "dish_number": "L4",
+      "name": {
+        "no": "Kylling med rød karri og kokos saus (sterk)",
+        "en": "Chicken with red curry (Lunch, spicy)"
+      },
+      "description": {
+        "no": "Lunsjporsjon. En sterk og smaksrik thailandsk rød karri med kylling og kokosmelk.",
+        "en": "Lunch portion. A spicy and flavorful Thai red curry with chicken and coconut milk."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-012.jpg",
+      "price": {
+        "takeaway": 145,
+        "dine_in": 165
+      },
+      "category": "Lunsj",
+      "ingredients": ["kylling", "rød karri", "kokosmelk"],
+      "tags": ["lunsj", "kylling", "karri", "thai", "sterk"],
+      "allergens": ["coconut-milk"],
+      "allergen_notes": {
+        "no": "Inneholder kokosmelk.",
+        "en": "Contains coconut milk."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 4
+    },
+    {
+      "id": "dish-L5",
+      "dish_number": "L5",
+      "name": {
+        "no": "Oksekjøtt med pepper saus",
+        "en": "Beef with pepper sauce (Lunch)"
+      },
+      "description": {
+        "no": "Lunsjporsjon. Møre biffbiter i en kraftig og aromatisk peppersaus.",
+        "en": "Lunch portion. Tender pieces of beef in a rich and aromatic pepper sauce."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-L5.jpg",
+      "price": {
+        "takeaway": 150,
+        "dine_in": 165
+      },
+      "category": "Lunsj",
+      "ingredients": ["oksekjøtt", "pepper", "soya"],
+      "tags": ["lunsj", "oksekjøtt", "pepper"],
+      "allergens": ["soy"],
+      "allergen_notes": {
+        "no": "Inneholder soya.",
+        "en": "Contains soy."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 2
+    },
+    {
+      "id": "dish-L6",
+      "dish_number": "L6",
+      "name": {
+        "no": "Oksekjøtt i karri saus",
+        "en": "Beef with curry sauce (Lunch)"
+      },
+      "description": {
+        "no": "Lunsjporsjon. En mild og kremet karrirett med mørt oksekjøtt og kokosmelk.",
+        "en": "Lunch portion. A mild and creamy curry dish with tender beef and coconut milk."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-024.jpg",
+      "price": {
+        "takeaway": 145,
+        "dine_in": 165
+      },
+      "category": "Lunsj",
+      "ingredients": ["oksekjøtt", "karri", "kokosmelk"],
+      "tags": ["lunsj", "oksekjøtt", "karri"],
+      "allergens": ["coconut-milk"],
+      "allergen_notes": {
+        "no": "Inneholder kokosmelk.",
+        "en": "Contains coconut milk."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 2
+    },
+    {
+      "id": "dish-L7",
+      "dish_number": "L7",
+      "name": {
+        "no": "Kylling i karri saus",
+        "en": "Chicken with curry sauce (Lunch)"
+      },
+      "description": {
+        "no": "Lunsjporsjon. En mild og kremet karrirett med kylling og kokosmelk.",
+        "en": "Lunch portion. A mild and creamy curry dish with chicken and coconut milk."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-011.jpg",
+      "price": {
+        "takeaway": 145,
+        "dine_in": 165
+      },
+      "category": "Lunsj",
+      "ingredients": ["kylling", "karri", "kokosmelk"],
+      "tags": ["lunsj", "kylling", "karri"],
+      "allergens": ["coconut-milk"],
+      "allergen_notes": {
+        "no": "Inneholder kokosmelk.",
+        "en": "Contains coconut milk."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 2
+    },
+    {
+      "id": "dish-L8",
+      "dish_number": "L8",
+      "name": {
+        "no": "Fritert svinekjøtt med søt-sur saus",
+        "en": "Sweet and sour pork (Lunch)"
+      },
+      "description": {
+        "no": "Lunsjporsjon. Sprø, fritert svinekjøtt i en klassisk sursøt saus.",
+        "en": "Lunch portion. Crispy, deep-fried pork in a classic sweet and sour sauce."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-033.jpg",
+      "price": {
+        "takeaway": 140,
+        "dine_in": 160
+      },
+      "category": "Lunsj",
+      "ingredients": ["svinekjøtt", "hvetemel", "egg"],
+      "tags": ["lunsj", "svin", "fritert", "sursøt"],
+      "allergens": ["egg", "gluten"],
+      "allergen_notes": {
+        "no": "Inneholder egg og gluten.",
+        "en": "Contains egg and gluten."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 0
+    },
+    {
+      "id": "dish-L9",
+      "dish_number": "L9",
+      "name": {
+        "no": "Stekt ris med kylling og reker",
+        "en": "Fried rice with chicken and shrimps (Lunch)"
+      },
+      "description": {
+        "no": "Lunsjporsjon. En populær klassiker med stekt ris, kyllingbiter og reker.",
+        "en": "Lunch portion. A popular classic with fried rice, pieces of chicken, and shrimps."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-040.jpg",
+      "price": {
+        "takeaway": 130,
+        "dine_in": 155
+      },
+      "category": "Lunsj",
+      "ingredients": ["ris", "kylling", "reker", "egg"],
+      "tags": ["lunsj", "ris", "kylling", "reker"],
+      "allergens": ["egg", "crustaceans"],
+      "allergen_notes": {
+        "no": "Inneholder egg og skalldyr.",
+        "en": "Contains egg and crustaceans."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 0
+    },
+    {
+      "id": "dish-061",
+      "dish_number": "61",
+      "name": {
+        "no": "Kongereker med pepper saus",
+        "en": "King prawns with pepper sauce (Lunch)"
+      },
+      "description": {
+        "no": "Lunsjporsjon. Stekte kongereker i en kraftig og aromatisk peppersaus.",
+        "en": "Lunch portion. Stir-fried king prawns in a rich and aromatic pepper sauce."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-061.jpg",
+      "price": {
+        "takeaway": 165,
+        "dine_in": 180
+      },
+      "category": "Lunsj",
+      "ingredients": ["kongereker", "pepper", "soya"],
+      "tags": ["lunsj", "kongereker", "pepper"],
+      "allergens": ["soy", "crustaceans"],
+      "allergen_notes": {
+        "no": "Inneholder soya og skalldyr.",
+        "en": "Contains soy and crustaceans."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 2
+    },
+    {
+      "id": "dish-062",
+      "dish_number": "62",
+      "name": {
+        "no": "Kongereker med grønnsaker",
+        "en": "King prawns chop suey (Lunch)"
+      },
+      "description": {
+        "no": "Lunsjporsjon. En klassisk Chop Suey med kongereker og ferske grønnsaker.",
+        "en": "Lunch portion. A classic Chop Suey with king prawns and fresh vegetables."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-051.jpg",
+      "price": {
+        "takeaway": 165,
+        "dine_in": 180
+      },
+      "category": "Lunsj",
+      "ingredients": ["kongereker", "grønnsaker", "soya"],
+      "tags": ["lunsj", "kongereker", "chop suey"],
+      "allergens": ["soy", "crustaceans"],
+      "allergen_notes": {
+        "no": "Inneholder soya og skalldyr.",
+        "en": "Contains soy and crustaceans."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 0
+    },
+    {
+      "id": "dish-071",
+      "dish_number": "71",
+      "name": {
+        "no": "And med pepper saus",
+        "en": "Duck with pepper sauce (Lunch)"
+      },
+      "description": {
+        "no": "Lunsjporsjon. Sprø, fritert and servert med en kraftig peppersaus.",
+        "en": "Lunch portion. Crispy, fried duck served with a rich pepper sauce."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-042.jpg",
+      "price": {
+        "takeaway": 140,
+        "dine_in": 160
+      },
+      "category": "Lunsj",
+      "ingredients": ["and", "pepper", "soya", "egg", "hvetemel"],
+      "tags": ["lunsj", "and", "pepper"],
+      "allergens": ["soy", "egg", "gluten"],
+      "allergen_notes": {
+        "no": "Inneholder soya, egg og gluten.",
+        "en": "Contains soy, egg and gluten."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 2
+    },
+    {
+      "id": "dish-072",
+      "dish_number": "72",
+      "name": {
+        "no": "And med chilli saus",
+        "en": "Duck with chili sauce (Lunch)"
+      },
+      "description": {
+        "no": "Lunsjporsjon. Sprø, fritert and servert med en sterk chilisaus.",
+        "en": "Lunch portion. Crispy, fried duck served with a spicy chili sauce."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-044.jpg",
+      "price": {
+        "takeaway": 130,
+        "dine_in": 155
+      },
+      "category": "Lunsj",
+      "ingredients": ["and", "chili", "soya", "egg", "hvetemel"],
+      "tags": ["lunsj", "and", "chili", "sterk"],
+      "allergens": ["soy", "egg", "gluten"],
+      "allergen_notes": {
+        "no": "Inneholder soya, egg og gluten.",
+        "en": "Contains soy, egg and gluten."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 3
+    },
+    {
+      "id": "dish-082",
+      "dish_number": "82",
+      "name": {
+          "no": "Stekt nudler med kylling (kinesisk/thaivis)",
+          "en": "Stir-fried noodles with chicken (Chinese/Thai style)"
+      },
+      "description": {
+          "no": "Lunsjporsjon. Stekte nudler med kylling i en kombinasjon av kinesisk og thailandsk stil.",
+          "en": "Lunch portion. Stir-fried noodles with chicken in a combination of Chinese and Thai styles."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-082.jpg",
+      "price": {
+          "takeaway": 165,
+          "dine_in": 180
+      },
+      "category": "Lunsj",
+      "ingredients": ["nudler", "kylling", "egg", "soya"],
+      "tags": ["lunsj", "nudler", "kylling", "kombinasjon"],
+      "allergens": ["soy", "egg"],
+      "allergen_notes": {
+          "no": "Inneholder soya og egg.",
+          "en": "Contains soy and egg."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 1
+    },
+    {
+      "id": "dish-083",
+      "dish_number": "83",
+      "name": {
+          "no": "Stekte nudler med oksekjøtt (kinesisk/thaivis)",
+          "en": "Stir-fried noodles with beef (Chinese/Thai style)"
+      },
+      "description": {
+          "no": "Lunsjporsjon. Stekte nudler med oksekjøtt i en kombinasjon av kinesisk og thailandsk stil.",
+          "en": "Lunch portion. Stir-fried noodles with beef in a combination of Chinese and Thai styles."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/dish-083.jpg",
+      "price": {
+          "takeaway": 165,
+          "dine_in": 180
+      },
+      "category": "Lunsj",
+      "ingredients": ["nudler", "oksekjøtt", "egg", "soya"],
+      "tags": ["lunsj", "nudler", "oksekjøtt", "kombinasjon"],
+      "allergens": ["soy", "egg"],
+      "allergen_notes": {
+          "no": "Inneholder soya og egg.",
+          "en": "Contains soy and egg."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 1
+    },
+    // --- Drikke---
+    {
+      "id": "drink-001",
+      "dish_number": "B1",
+      "name": {
+        "no": "Brus 0.5L",
+        "en": "Soda 0.5L"
+      },
+      "description": {
+        "no": "Velg din favorittbrus i 0.5L flaske.",
+        "en": "Choose your favorite soda in a 0.5L bottle."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/drink-001.jpg",
+      "price": {
+        "takeaway": 35,
+        "dine_in": 45
+      },
+      "category": "Drikke",
+      "ingredients": [],
+      "tags": ["drikke", "brus", "kald drikke"],
+      "allergens": [],
+      "allergen_notes": {
+        "no": "",
+        "en": ""
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 0,
+      "customization_options": [
+        {
+          "id": "soda-choice-0.5",
+          "type": "radio",
+          "title": {
+            "no": "Velg Type Brus",
+            "en": "Choose Soda Type"
+          },
+          "options": [
+            { "name": { "no": "Coca-Cola", "en": "Coca-Cola" }, "price_modifier": 0, "default": true },
+            { "name": { "no": "Coca-Cola Uten Sukker", "en": "Coca-Cola Zero Sugar" }, "price_modifier": 0 },
+            { "name": { "no": "Pepsi Max", "en": "Pepsi Max" }, "price_modifier": 0 },
+            { "name": { "no": "Fanta", "en": "Fanta" }, "price_modifier": 0 },
+            { "name": { "no": "Sprite", "en": "Sprite" }, "price_modifier": 0 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "drink-002",
+      "dish_number": "B2",
+      "name": {
+        "no": "Brus 1.5L",
+        "en": "Soda 1.5L"
+      },
+      "description": {
+        "no": "En stor 1.5L flaske med brus, perfekt for deling. Kun for takeaway.",
+        "en": "A large 1.5L bottle of soda, perfect for sharing. Takeaway only."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/drink-002.jpg",
+      "price": {
+        "takeaway": 60
+      },
+      "category": "Drikke",
+      "ingredients": [],
+      "tags": ["drikke", "brus", "kald drikke", "deling"],
+      "allergens": [],
+      "allergen_notes": {
+        "no": "",
+        "en": ""
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 0,
+      "customization_options": [
+        {
+          "id": "soda-choice-1.5",
+          "type": "radio",
+          "title": {
+            "no": "Velg Type Brus",
+            "en": "Choose Soda Type"
+          },
+          "options": [
+            { "name": { "no": "Coca-Cola", "en": "Coca-Cola" }, "price_modifier": 0, "default": true },
+            { "name": { "no": "Coca-Cola Uten Sukker", "en": "Coca-Cola Zero Sugar" }, "price_modifier": 0 },
+            { "name": { "no": "Pepsi Max", "en": "Pepsi Max" }, "price_modifier": 0 }
+          ]
+        }
+      ]
+    },
+    // --- Ekstra---
+    {
+      "id": "extra-001",
+      "dish_number": "E1",
+      "name": {
+        "no": "Ekstra Kjøtt",
+        "en": "Extra Meat"
+      },
+      "description": {
+        "no": "Legg til en ekstra porsjon med kjøtt (kylling, biff, eller svin) til din rett.",
+        "en": "Add an extra portion of meat (chicken, beef, or pork) to your dish."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/extra-001.jpg",
+      "price": {
+        "takeaway": 80,
+        "dine_in": 90
+      },
+      "category": "Ekstra",
+      "ingredients": ["kylling", "biff", "svin"],
+      "tags": ["ekstra", "kjøtt", "tilbehør"],
+      "dietary": [],
+      "available": true,
+      "spice_level": 0
+    },
+    {
+      "id": "extra-002",
+      "dish_number": "E2",
+      "name": {
+        "no": "Ekstra Saus",
+        "en": "Extra Sauce"
+      },
+      "description": {
+        "no": "En ekstra porsjon med valgfri saus (sursøt, karri, satay, etc.).",
+        "en": "An extra portion of any sauce (sweet & sour, curry, satay, etc.)."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/extra-002.jpg",
+      "price": {
+        "takeaway": 40,
+        "dine_in": 45
+      },
+      "category": "Ekstra",
+      "ingredients": [],
+      "tags": ["ekstra", "saus", "tilbehør"],
+      "dietary": [],
+      "available": true,
+      "spice_level": 0
+    },
+    {
+      "id": "extra-003",
+      "dish_number": "E3",
+      "name": {
+        "no": "Ekstra Ris",
+        "en": "Extra Rice"
+      },
+      "description": {
+        "no": "En ekstra porsjon med kokt ris.",
+        "en": "An extra portion of steamed rice."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/extra-003.jpg",
+      "price": {
+        "takeaway": 40,
+        "dine_in": 50
+      },
+      "category": "Ekstra",
+      "ingredients": ["ris"],
+      "tags": ["ekstra", "ris", "tilbehør"],
+      "dietary": [],
+      "available": true,
+      "spice_level": 0
+    },
+    {
+      "id": "extra-004",
+      "dish_number": "E4",
+      "name": {
+        "no": "Ekstra Chilli",
+        "en": "Extra Chili"
+      },
+      "description": {
+        "no": "Fersk eller tørket chili for å gjøre retten din sterkere.",
+        "en": "Fresh or dried chili to make your dish spicier."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/extra-004.jpg",
+      "price": {
+        "takeaway": 5,
+        "dine_in": 10
+      },
+      "category": "Ekstra",
+      "ingredients": ["chili"],
+      "tags": ["ekstra", "chili", "sterk"],
+      "dietary": [],
+      "available": true,
+      "spice_level": 5
+    },
+    {
+      "id": "extra-005",
+      "dish_number": "E5",
+      "name": {
+        "no": "Ekstra Grønnsaker",
+        "en": "Extra Vegetables"
+      },
+      "description": {
+        "no": "Legg til en ekstra porsjon med friske, wokkede grønnsaker til din rett.",
+        "en": "Add an extra portion of fresh, wok-fried vegetables to your dish."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/extra-005.jpg",
+      "price": {
+        "takeaway": 40,
+        "dine_in": 45
+      },
+      "category": "Ekstra",
+      "ingredients": ["grønnsaker"],
+      "tags": ["ekstra", "grønnsaker", "tilbehør"],
+      "dietary": ["vegetarian", "vegan"],
+      "available": true,
+      "spice_level": 0
+    },
+    {
+      "id": "extra-006",
+      "dish_number": "E6",
+      "name": {
+        "no": "Rekechips",
+        "en": "Prawn Crackers"
+      },
+      "description": {
+        "no": "En pose med sprø, friterte rekechips.",
+        "en": "A bag of crispy, deep-fried prawn crackers."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/extra-006.jpg",
+      "price": {
+        "takeaway": 50,
+        "dine_in": 60
+      },
+      "category": "Ekstra",
+      "ingredients": ["reker", "tapiokamel"],
+      "tags": ["ekstra", "rekechips", "snacks"],
+      "allergens": ["crustaceans"],
+      "allergen_notes": {
+        "no": "Inneholder skalldyr.",
+        "en": "Contains crustaceans."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 0
+    },
+    {
+      "id": "extra-007",
+      "dish_number": "E7",
+      "name": {
+        "no": "Stekt ris istedenfor kokt ris",
+        "en": "Fried rice instead of steamed rice"
+      },
+      "description": {
+        "no": "Oppgrader din rett fra vanlig kokt ris til stekt ris med egg og grønnsaker.",
+        "en": "Upgrade your dish from plain steamed rice to fried rice with egg and vegetables."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/extra-007.jpg",
+      "price": {
+        "takeaway": 60,
+        "dine_in": 70
+      },
+      "category": "Ekstra",
+      "ingredients": ["ris", "egg", "soya", "grønnsaker"],
+      "tags": ["ekstra", "oppgradering", "ris"],
+      "allergens": ["soy", "egg"],
+      "allergen_notes": {
+        "no": "Inneholder soya og egg.",
+        "en": "Contains soy and egg."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 0
+    },
+    {
+      "id": "extra-008",
+      "dish_number": "E8",
+      "name": {
+        "no": "Stekte nudler istedenfor kokt ris",
+        "en": "Fried noodles instead of steamed rice"
+      },
+      "description": {
+        "no": "Oppgrader din rett fra vanlig kokt ris til stekte nudler med grønnsaker.",
+        "en": "Upgrade your dish from plain steamed rice to fried noodles with vegetables."
+      },
+      "image_url": "https://your-restaurant.com/img/menu/extra-008.jpg",
+      "price": {
+        "takeaway": 65,
+        "dine_in": 75
+      },
+      "category": "Ekstra",
+      "ingredients": ["nudler", "egg", "soya", "grønnsaker"],
+      "tags": ["ekstra", "oppgradering", "nudler"],
+      "allergens": ["soy", "egg", "gluten"],
+      "allergen_notes": {
+        "no": "Inneholder soya, egg og gluten.",
+        "en": "Contains soy, egg and gluten."
+      },
+      "dietary": [],
+      "available": true,
+      "spice_level": 0
     }
   ]
 }
